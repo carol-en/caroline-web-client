@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import React, { Component } from "react";
 import Home from "../Home";
 import About from "../About";
+import Album from "../Album";
 import Portfolio from "../Portfolio";
 import ShowArt from "../ArtWork/Art";
 import ArtWork from "../ArtWork";
@@ -16,6 +17,7 @@ class RouterReact extends Component {
         <Switch>
             <Route component ={About} exact path="/about" />
             <Route component ={Portfolio} exact path="/portfolio" />
+            <Route component ={Album} exact path="/artwork" />
             <Route component ={ShowArt} path="/art/:artPost" />
             <Route component ={ArtWork} exact path="/art" />
             <Route component ={Entry} path="/blog/:blogPost" />

@@ -8,7 +8,8 @@ class Nav extends Component {
                 <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
                 <Link to="/portfolio">Portfolio</Link>
-                <Link to="/art">Art Work</Link>
+                <Link to="/artwork">Art Work</Link>
+                {/* <Link to="/art">Art Work</Link> */}
                 <Link to="/blog">Blog</Link>
                 <Link to="/contact">Contact</Link>
             </nav>
