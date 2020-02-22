@@ -9,11 +9,11 @@ class Entry extends Component {
     componentDidMount() {
         const slug = this.props.match.params.blogPost;
           client.getEntries({
-              content_type: "blogPost",
-              'fields.slug[match]': slug,
-              limit: 1
+              content_type: "blog",
+              'fields.slug[in]': slug
           })
             .then(entry => this.setState({ entry: entry.items[0] }))
+            .then(entry => console.log(entry) )
             .catch(console.error)
 
     }
@@ -25,10 +25,9 @@ class Entry extends Component {
          } else {
               return (
                  <li key= {entry.sys.id}>
-                     <h2>{entry.fields.title}</h2> 
-                     <h3>{entry.fields.name}</h3>
-                     <h4>{entry.fields.publishDate}</h4>
-                     <blockquote>{entry.fields.body}</blockquote>
+                        <h2>{entry.fields.title}</h2> 
+                        <h4>{entry.fields.date}</h4>
+                        <blockquote>{entry.fields.description}</blockquote>
                  </li>
              )
          }

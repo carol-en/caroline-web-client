@@ -9,9 +9,10 @@ class Blog extends Component {
     componentDidMount () {
 
           client.getEntries({
-              "content_type": "blogPost"
+              "content_type": "blog"
           })
             .then(entries => this.setState({ entries: entries.items }))
+            // .then(entries => console.log(entries.items))
 
     }
     render() {
@@ -24,12 +25,13 @@ class Blog extends Component {
                     </li>
                 )
             } else { 
+                
                 return (
                     <li key={i}>
                         <h2><Link to= {`/blog/${entry.fields.slug}`}>{entry.fields.title}</Link></h2> 
-                        <h3>{entry.fields.name}</h3>
-                        <h4>{entry.fields.publishDate}</h4>
-                        <blockquote>{entry.fields.body}</blockquote>
+                        <h4>{entry.fields.date}</h4>
+                        <blockquote>{entry.fields.description}</blockquote>
+                        
                     </li>
             )
             }
@@ -37,7 +39,6 @@ class Blog extends Component {
         });
         return (
             <>
-                <h3>Hello from Blog</h3>
                 <ul>
                     {entry}
                 </ul>

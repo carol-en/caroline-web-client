@@ -5,7 +5,6 @@ class Home extends Component {
     render() {
         return (
             <>
-                <h1>Hello from Home Component!</h1>
                 <Canvas />
             </>
         )

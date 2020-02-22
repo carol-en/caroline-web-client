@@ -3,7 +3,8 @@ import React, { Component } from "react";
 import Home from "../Home";
 import About from "../About";
 import Portfolio from "../Portfolio";
-import Gallery from "../Gallery";
+import ShowArt from "../ArtWork/Art";
+import ArtWork from "../ArtWork";
 import Blog from "../Blog";
 import Entry from "../Blog/Entry";
 import Contact from "../Contact";
@@ -15,7 +16,8 @@ class RouterReact extends Component {
         <Switch>
             <Route component ={About} exact path="/about" />
             <Route component ={Portfolio} exact path="/portfolio" />
-            <Route component ={Gallery} path="/gallery" />
+            <Route component ={ShowArt} path="/art/:artPost" />
+            <Route component ={ArtWork} exact path="/art" />
             <Route component ={Entry} path="/blog/:blogPost" />
             <Route component ={Blog} exact path="/blog" />
             <Route component ={Contact} exact path="/contact" />

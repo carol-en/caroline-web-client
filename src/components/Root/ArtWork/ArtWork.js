@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import client from "../contentful";
+import { Link } from "react-router-dom";
 
-class Portfolio extends Component {
+class ArtWork extends Component {
     state = {
         entries: []
     }
     componentDidMount () {
 
           client.getEntries({
-              "content_type": "projects-code"
+              "content_type": "artWork"
           })
             .then(entries => this.setState({ entries: entries.items }))
-            // .then(entries => console.log(entries.items))
 
     }
     render() {
@@ -24,18 +24,11 @@ class Portfolio extends Component {
                     </li>
                 )
             } else { 
-                
                 return (
                     <li key={i}>
-                        <h2><a href={`/blog/${entry.fields.link}`}>{entry.fields.title}</a></h2> 
-                        <h4>{entry.fields.date}</h4>
-                        <blockquote>
-                            {entry.fields.description}
-                            <figure>
-                                <img src={entry.fields.image.fields.file.url} alt={entry.fields.title} />
-                            </figure>
-                        </blockquote>
-                        
+                        <Link to= {`/art/${entry.sys.id}`}>
+                            <img src={entry.fields.thumbnail.fields.file.url} alt={entry.fields.title} />
+                        </Link> 
                     </li>
             )
             }
@@ -52,4 +45,4 @@ class Portfolio extends Component {
 }
 
 
-export default Portfolio
+export default ArtWork

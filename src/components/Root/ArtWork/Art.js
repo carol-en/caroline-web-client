@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import client from "../contentful";
 
-class About extends Component {
+class Art extends Component {
     state = {
         entry: null
     }
 
     componentDidMount() {
-        const slug = this.props.match.params.blogPost;
-          client.getEntry('21sIZgWzyMlXPLw3hhjV2h')
+        const slug = this.props.match.params.artPost;
+          client.getEntry(slug)
             .then(entry => this.setState({ entry: entry }))
-            // .then(entry => console.log(entry) )
             .catch(console.error)
 
     }
@@ -20,11 +19,17 @@ class About extends Component {
         if(!entry) {
             return <h1>Loading...</h1>
          } else {
-             
+            let fullImage = entry.fields.fullImage;
               return (
                  <li key= {entry.sys.id}>
+
+                        {fullImage.map((img, inx) => {
+                            return   <img src={img.fields.file.url} alt={img.fields.file.fileName} key={inx}/>
+                        })}
                         <h2>{entry.fields.title}</h2> 
-                        <blockquote>{entry.fields.body}</blockquote>
+                        <h4>{entry.fields.date}</h4>
+                        <h5>Category: {entry.fields.category}</h5>
+                        <blockquote>{entry.fields.description}</blockquote>
                  </li>
              )
          }
@@ -41,5 +46,4 @@ class About extends Component {
     }
 }
 
-
-export default About
+export default Art;
