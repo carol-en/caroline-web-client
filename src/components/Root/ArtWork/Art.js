@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import client from "../contentful";
+import client from "../utils/contentful";
 
 class Art extends Component {
     state = {

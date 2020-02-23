@@ -4,7 +4,6 @@ import Home from "../Home";
 import About from "../About";
 import Edit from "../Album/Edit";
 import New from "../Album/New";
-import ShowWork from "../Album/Show";
 import Album from "../Album";
 import Portfolio from "../Portfolio";
 import ShowArt from "../ArtWork/Art";
@@ -21,8 +20,7 @@ class RouterReact extends Component {
             <Route component ={About} exact path="/about" />
             <Route component ={Portfolio} exact path="/portfolio" />
             <Route component ={New} exact path="/artwork/new" />
-            <Route component ={Edit} path="/artwork/:showWork/edit" />
-            <Route component ={ShowWork} path="/artwork/:showWork" />
+            <Route component ={Edit} path="/artwork/:id/edit" />
             <Route component ={Album} exact path="/artwork" />
             <Route component ={ShowArt} path="/art/:artPost" />
             <Route component ={ArtWork} exact path="/art" />

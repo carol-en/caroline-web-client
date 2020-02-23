@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import client from "../contentful";
+import client from "../utils/contentful";
 import { Link } from "react-router-dom";
 
 class ArtWork extends Component {
