@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import client from "../utils/contentful";
+import "./about.scss";
 
 class About extends Component {
     state = {

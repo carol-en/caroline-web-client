@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import client from "../utils/contentful";
+import "./blog.scss";
 
 class Entry extends Component {
     state = {

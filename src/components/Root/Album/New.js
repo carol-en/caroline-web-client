@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import API_URL from "../utils/API";
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import "./album.scss";
 
 class New extends Component {
     state = {

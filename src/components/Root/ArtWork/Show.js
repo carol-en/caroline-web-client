@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import client from "../utils/contentful";
+import "./artwork.scss";
 
 class Show extends Component {
     state = {

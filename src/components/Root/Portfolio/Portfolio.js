@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import client from "../utils/contentful";
+import "./portfolio.scss";
 
 class Portfolio extends Component {
     state = {

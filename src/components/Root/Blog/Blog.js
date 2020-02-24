@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import client from "../utils/contentful";
 import { Link } from "react-router-dom";
+import "./blog.scss";
 
 class Blog extends Component {
     state = {

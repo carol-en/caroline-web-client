@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import API_URL from "../utils/API";
 import axios from 'axios';
+import "./album.scss";
 
 class ShowImage extends Component {
     render() {

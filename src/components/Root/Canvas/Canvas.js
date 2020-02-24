@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import main from "./main.css";
+import "./canvas.scss";
 
 
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import client from "../utils/contentful";
 import { Link } from "react-router-dom";
+import "./artwork.scss";
 
 class ArtWork extends Component {
     state = {
