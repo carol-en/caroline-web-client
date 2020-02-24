@@ -14,23 +14,18 @@ class Edit extends Component {
     }
 
     componentDidMount() {
-        const slug = parseInt(this.props.match.params.id);
-        axios.get(API_URL)
-          .then(res => {
-              res.data.forEach( e => {
-                if(e.id === slug) {
-                    this.setState({
-                        thumbnail: e.thumbnail,
-                        name: e.name,
-                        url: e.url,
-                        medium: e.medium,
-                        category: e.category,
-                        kind: e.kind,
-                        id: e.id
-                    })
-                }
-            });
-        })
+        const slug = this.props.match.params.id;
+
+        axios.get(`${API_URL}/${slug}`)
+        .then(res => this.setState({ 
+            thumbnail: res.data.thumbnail,
+            name: res.data.name,
+            url: res.data.url,
+            medium: res.data.medium,
+            category: res.data.category,
+            kind: res.data.kind,
+            id: res.data.id
+         }))
     }
 
 
