@@ -7,7 +7,6 @@ class Contact extends Component {
     }
 
     componentDidMount() {
-        const slug = this.props.match.params.blogPost;
           client.getEntry('5t51cM3Ib9IhH0MccLuJfn')
             .then(entry => this.setState({ entry: entry }))
             // .then(entry => console.log(entry) )

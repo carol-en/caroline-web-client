@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import API_URL from "../utils/API";
 import axios from 'axios';
 
@@ -91,6 +92,7 @@ class Edit extends Component {
                 <div>
                 <input  value={this.state.id} id="id" type="hidden" name="id" />
                     <input type="submit" value="Update Piece" />
+                    <Link to={`/artwork/${this.state.id}`}>Cancel</Link>
                 </div>
             </form>
         </>

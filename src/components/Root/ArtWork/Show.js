@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import client from "../utils/contentful";
 
-class Art extends Component {
+class Show extends Component {
     state = {
         entry: null
     }
@@ -46,4 +46,4 @@ class Art extends Component {
     }
 }
 
-export default Art;
+export default Show;

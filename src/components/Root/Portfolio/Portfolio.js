@@ -3,44 +3,33 @@ import client from "../utils/contentful";
 
 class Portfolio extends Component {
     state = {
-        entries: []
+        entry: null
     }
-    componentDidMount () {
 
-          client.getEntries({
-              "content_type": "projects-code"
-          })
-            .then(entries => this.setState({ entries: entries.items }))
-            // .then(entries => console.log(entries.items))
+    componentDidMount() {
+          client.getEntry('4Yidjiu3QgxKIZgySwjuPd')
+            .then(entry => this.setState({ entry: entry }))
+            // .then(entry => console.log(entry) )
+            .catch(console.error)
 
+    }
+
+    article() {
+        let entry = this.state.entry;
+        if(!entry) {
+            return <h1>Loading...</h1>
+         } else {
+             
+              return (
+                 <li key= {entry.sys.id}>
+                        <h2>{entry.fields.title}</h2> 
+                        <blockquote>{entry.fields.body}</blockquote>
+                 </li>
+             )
+         }
     }
     render() {
-        let entries = this.state.entries;
-        const entry = entries.map((entry, i) => {
-           if(!entry) {
-                return (
-                    <li>
-                        <h2>Loading...</h2>
-                    </li>
-                )
-            } else { 
-                
-                return (
-                    <li key={i}>
-                        <h2><a href={`/blog/${entry.fields.link}`}>{entry.fields.title}</a></h2> 
-                        <h4>{entry.fields.date}</h4>
-                        <blockquote>
-                            {entry.fields.description}
-                            <figure>
-                                <img src={entry.fields.image.fields.file.url} alt={entry.fields.title} />
-                            </figure>
-                        </blockquote>
-                        
-                    </li>
-            )
-            }
-        
-        });
+        let entry = this.article();
         return (
             <>
                 <ul>
@@ -51,5 +40,4 @@ class Portfolio extends Component {
     }
 }
 
-
-export default Portfolio
+export default Portfolio;

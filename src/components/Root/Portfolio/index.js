@@ -1,3 +1,3 @@
-import Portfolio from "./Portfolio.js";
+import Portfolio from "./Portfolio.js"
 
 export default Portfolio;

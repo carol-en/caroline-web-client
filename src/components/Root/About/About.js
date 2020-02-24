@@ -7,7 +7,6 @@ class About extends Component {
     }
 
     componentDidMount() {
-        const slug = this.props.match.params.blogPost;
           client.getEntry('21sIZgWzyMlXPLw3hhjV2h')
             .then(entry => this.setState({ entry: entry }))
             // .then(entry => console.log(entry) )
