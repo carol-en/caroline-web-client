@@ -17,7 +17,7 @@ class Edit extends Component {
 
     componentDidMount() {
         const slug = this.props.match.params.id;
-
+        console.log(API_URL.length)
         axios.get(`${API_URL}/${slug}`)
         .then(res => this.setState({ 
             thumbnail: res.data.thumbnail,
@@ -51,7 +51,7 @@ class Edit extends Component {
                 'Content-Type': 'application/json'
             }
         })
-        .then(() => window.location.assign('/artwork'))
+        .then(() => window.location.assign(`/artwork/${id}`))
     }
     render() {
         return (

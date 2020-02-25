@@ -29,7 +29,8 @@ class New extends Component {
             category: this.state.category,
             kind: this.state.kind
         })
-        .then(() => window.location.assign('/artwork'))
+        .then(res => window.location.assign(`/artwork/${res.data.id}`)
+            )
         .catch(err => console.log(err.response.data));
     }
 
