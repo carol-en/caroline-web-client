@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Title from "./Title";
 import client from "../utils/contentful";
 import "./portfolio.scss";
 
@@ -33,6 +34,8 @@ class Portfolio extends Component {
         let entry = this.article();
         return (
             <>
+            <Title />
+            
                 <ul>
                     {entry}
                 </ul>

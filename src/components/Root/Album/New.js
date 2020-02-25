@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Title from "./Title";
 import API_URL from "../utils/API";
 import { Link } from "react-router-dom";
 import axios from 'axios';
@@ -38,6 +39,8 @@ class New extends Component {
     render() {
         return (
             <>
+            <Title />
+            
                 <h1>New Art Work Component</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div>

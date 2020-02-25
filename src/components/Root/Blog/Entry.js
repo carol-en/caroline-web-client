@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Title from "./Title";
 import client from "../utils/contentful";
 import "./blog.scss";
 
@@ -37,6 +38,8 @@ class Entry extends Component {
         let entry = this.article();
         return (
             <>
+            <Title />
+            
             <h1>Hello from Entry</h1>
                 <ul>
                     {entry}

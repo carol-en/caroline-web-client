@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Title from "./Title";
 import { Link } from "react-router-dom";
 import API_URL from "../utils/API";
 import axios from "axios";
@@ -35,7 +36,7 @@ componentDidMount() {
         });
         return (
             <>
-                <h2>Hello From Album!</h2>
+               <Title />
                 <Link to="/artwork/new">Add New Piece</Link>
                 <ul>
                     {entry}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Title from "./Title";
 import { Link } from "react-router-dom";
 import API_URL from "../utils/API";
 import axios from 'axios';
@@ -17,7 +18,7 @@ class Edit extends Component {
 
     componentDidMount() {
         const slug = this.props.match.params.id;
-        console.log(API_URL.length)
+  
         axios.get(`${API_URL}/${slug}`)
         .then(res => this.setState({ 
             thumbnail: res.data.thumbnail,
@@ -56,7 +57,8 @@ class Edit extends Component {
     render() {
         return (
             <>
-            <h1>Update Art Work Component</h1>
+            <Title />
+            
             <form onSubmit={this.handleUpdate}>
                 <div>
                 <label htmlFor="name"> Piece Name<br /></label>

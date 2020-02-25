@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Title from "./Title";
 import client from "../utils/contentful";
 import { Link } from "react-router-dom";
 import "./blog.scss";
@@ -40,6 +41,7 @@ class Blog extends Component {
         });
         return (
             <>
+            <Title />
                 <ul>
                     {entry}
                 </ul>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Title from "./Title";
 import { Link } from "react-router-dom";
 import API_URL from "../utils/API";
 import axios from 'axios';
@@ -9,7 +10,9 @@ class ShowImage extends Component {
         let data = this.props.data;
         return (
             <>
-            <h3>ShowImage</h3>
+            <Title />
+
+            <h3>Show Image</h3>
             <Link to={`/artwork/${data.id}/edit`}>Update Piece</Link>
             <Link to="/artwork" >Return</Link>
             <figure>

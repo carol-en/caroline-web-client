@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import RouterReact from "./RouterReact";
-import "./index.scss";
+import "./style/index.scss";
+import Title from "../Root/style/Title";
 import Nav from "./Nav";
 
 class Root extends Component {
     render() {
         return (
             <section>
+                <Title />
                 <Nav/ >
                 <RouterReact />
             </section>
