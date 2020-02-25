@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Markdown from "react-markdown";
 import Title from "./Title";
 import client from "../utils/contentful";
 import "./blog.scss";
@@ -29,7 +30,7 @@ class Entry extends Component {
                  <li key= {entry.sys.id}>
                         <h2>{entry.fields.title}</h2> 
                         <h4>{entry.fields.date}</h4>
-                        <blockquote>{entry.fields.description}</blockquote>
+                        <blockquote><Markdown source={entry.fields.description}/></blockquote>
                  </li>
              )
          }

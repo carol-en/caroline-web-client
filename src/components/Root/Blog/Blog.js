@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Markdown from "react-markdown";
 import Title from "./Title";
 import client from "../utils/contentful";
 import { Link } from "react-router-dom";
@@ -32,7 +33,9 @@ class Blog extends Component {
                     <li key={i}>
                         <h2><Link to= {`/blog/${entry.fields.slug}`}>{entry.fields.title}</Link></h2> 
                         <h4>{entry.fields.date}</h4>
-                        <blockquote>{entry.fields.description}</blockquote>
+                        <blockquote>
+                            <Markdown source={entry.fields.description} />
+                        </blockquote>
                         
                     </li>
             )

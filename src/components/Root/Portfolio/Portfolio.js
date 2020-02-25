@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Markdown from "react-markdown";
 import Title from "./Title";
 import client from "../utils/contentful";
 import "./portfolio.scss";
@@ -25,7 +26,9 @@ class Portfolio extends Component {
               return (
                  <li key= {entry.sys.id}>
                         <h2>{entry.fields.title}</h2> 
-                        <blockquote>{entry.fields.body}</blockquote>
+                        <blockquote>
+                            <Markdown source={entry.fields.body} />
+                        </blockquote>
                  </li>
              )
          }

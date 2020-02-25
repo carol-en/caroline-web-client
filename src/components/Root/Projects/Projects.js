@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Markdown from "react-markdown";
 import Title from "./Title";
 import client from "../utils/contentful";
 import "./projects.scss";
@@ -32,7 +33,7 @@ class Projects extends Component {
                         <h2><a href={`/blog/${entry.fields.link}`}>{entry.fields.title}</a></h2> 
                         <h4>{entry.fields.date}</h4>
                         <blockquote>
-                            {entry.fields.description}
+                            <Markdown source={entry.fields.description} />
                             <figure>
                                 <img src={entry.fields.image.fields.file.url} alt={entry.fields.title} />
                             </figure>

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Markdown from "react-markdown";
 import Title from "./Title";
 import client from "../utils/contentful";
 import "./artwork.scss";
@@ -31,7 +32,9 @@ class Show extends Component {
                         <h2>{entry.fields.title}</h2> 
                         <h4>{entry.fields.date}</h4>
                         <h5>Category: {entry.fields.category}</h5>
-                        <blockquote>{entry.fields.description}</blockquote>
+                        <blockquote>
+                            <Markdown source={entry.fields.description} />
+                        </blockquote>
                  </li>
              )
          }
