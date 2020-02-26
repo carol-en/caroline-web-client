@@ -1,0 +1,7 @@
+@import "./style/bulma.scss";
+@import "./style/variables.scss";
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $Overpass-Mono;
+    font-weight: 700;
+}

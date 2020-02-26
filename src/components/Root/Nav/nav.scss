@@ -1,0 +1,47 @@
+@import "../root";
+
+
+nav {
+    background: $red-color;
+    text-transform: uppercase;
+    align-items: stretch;
+    display: flex;
+    flex-flow: nowrap column;
+    @media(min-width: $breakpoint-s) {
+        flex-flow: nowrap row;
+    }
+}
+
+a.menu-link {
+    color: $cream-color;
+    background: $red-color;
+    padding: 2em;
+    @extend %transitions;
+
+    @media(max-width: $breakpoint-s) {
+        padding: 1em;
+    }
+}
+
+a:hover.menu-link {
+    background: $gray-color;
+    color: $cream-color;
+}
+
+button.burger {
+    display: initial;
+    width: 100%;
+    color: $cream-color;
+    background: $red-color;
+    border: 0;
+    font-size: 2.5em;
+    padding: .25em;
+    text-align: left;
+    display:initial;
+    cursor: pointer;
+
+    @media(min-width: $breakpoint-s) {
+        display: none;
+    
+    }
+}

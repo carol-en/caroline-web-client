@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./canvas.scss";
+import inkImg from "./images/ink.jpg";
 
 
 
@@ -15,6 +16,10 @@ class Canvas extends Component {
       }
     
     componentDidMount () {
+        this.init();
+    }
+
+    componentWillUnmount () {
         this.init();
     }
 
@@ -37,7 +42,7 @@ class Canvas extends Component {
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
             const image = new Image();
-            image.src = "https://i.imgur.com/GHKzJPM.png";
+            image.src = inkImg;
 
             image.onload = () => {
                 this.cover(image, cxt);
