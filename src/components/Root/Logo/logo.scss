@@ -2,31 +2,80 @@
 
 aside.logo {
     color: $gray-color;
-    // width: 100%;
     // border: 2px solid red;
     cursor: crosshair;
     cursor: url("./images/cursor-black.png"), auto;
     position: absolute;
     z-index: 1;
     text-align: left;
-    top: 10em;
+    top: 3.5em;
     left: 0;
+    @extend %transitions;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */ 
 
     h1 {
-        color: lighten($hotred-color, 10%);
-        margin-left: .25em;
+        color: darken($hotred-color, 10%);
+        margin-left: 0;
         word-spacing: -20px;
-        // color: $hotred-color;
-        text-shadow: lighten($red-color, 3%) 0px 0px 5px,   lighten($red-color, 5%) 0px 0px 10px,   lighten($red-color, 10%) 0px 0px 15px,   lighten($red-color, 15%) 0px 0px 20px;
+        line-height: 1em;
+        text-shadow: 
+         lighten($red-color, 3%) 0px 0px 5px,   
+         lighten($red-color, 5%) 0px 0px 10px,   
+         lighten($red-color, 10%) 0px 0px 15px,   
+         lighten($red-color, 15%) 0px 0px 20px;
         font-size: 5em;
         text-transform: uppercase;
         opacity: 1;
         @extend %transitions;
     }
 
-    h1:hover {
-        font-size: 4em;
-        margin-left: .50em;
-        opacity: .5;
+}
+
+
+.floating-logos {
+    color: darken($cyan-color, 5%);
+    font-size: 4em;
+    @extend %transitions;
+
+    .log-css {
+        transform: translate(1em, .25em);
     }
+
+    .log-react {
+        transform: translate(5.5em, -.5em);
+    }
+
+    .log-sass {
+        transform: translate(1em, .25em);
+    }
+
+    .log-js {
+        transform: translate(2em, 2em);
+    }
+
+    .log-brush {
+        transform: translate(-2em, 2em);
+    }
+
+    .log-pen {
+        transform: translate(0, -1.5em);
+    }
+
+    .log-adobe {
+        transform: translate(-3em, 4em);
+    }
+
+    .log-tablet {
+        transform: translate(1em, -3em);
+    }
+
+}
+
+aside.logo:hover {
+    opacity: .5; 
+    transform: scale(.95);
+ 
 }

@@ -8,16 +8,20 @@ class Logo extends Component {
     render() {
         return (
             <aside className="logo">
-                <h1>Splashes of Color</h1>
-                <div className="floating-icons">
-                    <FontAwesomeIcon icon={faCss3}/>
-                    <FontAwesomeIcon icon={faReact}/>
-                    <FontAwesomeIcon icon={faSass}/>
-                    <FontAwesomeIcon icon={faJsSquare}/>
-                    <FontAwesomeIcon icon={faPaintBrush}/>
-                    <FontAwesomeIcon icon={faPenFancy}/>
-                    <FontAwesomeIcon icon={faAdobe}/>
-                    <FontAwesomeIcon icon={faTablet}/>
+                <h1>
+                    Splashes<br />
+                     of<br />
+                     Color
+                </h1>
+                <div className="floating-logos">
+                    <FontAwesomeIcon className="log-css" icon={faCss3}/>
+                    <FontAwesomeIcon className="log-react" icon={faReact}/>
+                    <FontAwesomeIcon className="log-sass" icon={faSass}/>
+                    <FontAwesomeIcon className="log-js" icon={faJsSquare}/>
+                    <FontAwesomeIcon className="log-brush" icon={faPaintBrush}/>
+                    <FontAwesomeIcon className="log-pen" icon={faPenFancy}/>
+                    <FontAwesomeIcon className="log-adobe" icon={faAdobe}/>
+                    <FontAwesomeIcon className="log-tablet" icon={faTablet}/>
                 </div>
             </aside>
         )
