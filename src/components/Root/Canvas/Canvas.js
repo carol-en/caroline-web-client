@@ -115,8 +115,7 @@ class Canvas extends Component {
     render() {
         return (
             <>
-            
-            <canvas ref={this.canvasRef}  className="hero"/>
+                <canvas ref={this.canvasRef}  className="hero" />
             </>
         )
         

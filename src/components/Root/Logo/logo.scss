@@ -1,0 +1,32 @@
+@import "../root";
+
+aside.logo {
+    color: $gray-color;
+    // width: 100%;
+    // border: 2px solid red;
+    cursor: crosshair;
+    cursor: url("./images/cursor-black.png"), auto;
+    position: absolute;
+    z-index: 1;
+    text-align: left;
+    top: 10em;
+    left: 0;
+
+    h1 {
+        color: lighten($hotred-color, 10%);
+        margin-left: .25em;
+        word-spacing: -20px;
+        // color: $hotred-color;
+        text-shadow: lighten($red-color, 3%) 0px 0px 5px,   lighten($red-color, 5%) 0px 0px 10px,   lighten($red-color, 10%) 0px 0px 15px,   lighten($red-color, 15%) 0px 0px 20px;
+        font-size: 5em;
+        text-transform: uppercase;
+        opacity: 1;
+        @extend %transitions;
+    }
+
+    h1:hover {
+        font-size: 4em;
+        margin-left: .50em;
+        opacity: .5;
+    }
+}

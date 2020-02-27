@@ -3,6 +3,7 @@
 
 nav {
     background: $red-color;
+    border-bottom: darken($hotred-color, 5%) 1px solid;
     text-transform: uppercase;
     align-items: stretch;
     display: flex;
@@ -16,7 +17,6 @@ a.menu-link {
     color: $cream-color;
     background: $red-color;
     padding: 2em;
-    @extend %transitions;
 
     @media(max-width: $breakpoint-s) {
         padding: 1em;
@@ -35,7 +35,7 @@ button.burger {
     background: $red-color;
     border: 0;
     font-size: 2.5em;
-    padding: .25em;
+    padding: .50em;
     text-align: left;
     display:initial;
     cursor: pointer;
