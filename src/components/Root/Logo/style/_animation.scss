@@ -1,0 +1,170 @@
+
+
+.floating-logos {
+    color: darken($cyan-color, 5%);
+    font-size: 4em;
+    @extend %transitions;
+
+
+
+    .log-css {
+        color: lighten($cyan-color, 45%);
+        animation: abounce 4s infinite  ease-in-out;
+    }
+
+    @keyframes abounce {
+        0%, 100% {
+            transform: 
+            translate(1em, .25em) 
+            rotate(30deg)
+            scale(1.5);
+        }
+
+        50% {
+            transform: 
+            translate(1em, .60em) 
+            rotate(30deg)
+            scale(1.5);
+        }
+    }
+
+    .log-react {
+        color: $red-color;
+        animation: abounce2 4s   infinite  ease-in-out;
+    }
+
+    @keyframes abounce2 {
+        0%, 100% {
+            transform: 
+            translate(5.5em, -.5em)
+            scale(.75);
+        }
+
+        50% {
+            transform: 
+            translate(5.5em, 1em)
+            scale(.75);
+        }
+    }
+
+    .log-sass {
+        color: $red-color;
+        animation: abounce3 4s   infinite  ease-in-out;
+    }
+
+    @keyframes abounce3 {
+        0%, 100% {
+            transform: 
+            translate(1em, .25em) 
+            rotate(-45deg)
+            scale(1.15);
+        }
+
+        50% {
+            transform: 
+            translate(1em, .90em) 
+            rotate(-45deg)
+            scale(1.15);
+        }
+    }
+
+    .log-js {
+        color: darken($cream-color, 45%);
+        animation: abounce4 4s   infinite  ease-in-out;
+    }
+
+    @keyframes abounce4 {
+        0%, 100% {
+            transform: 
+            translate(2em, 2em) 
+            rotate(45deg)
+            scale(.65);
+        }
+
+        50% {
+            transform: 
+            translate(2em, 1em) 
+            rotate(45deg)
+            scale(.65);
+        }
+    }
+
+    .log-brush {
+        color: lighten($gray-color, 70%);
+        animation: abounce5 4s   infinite  ease-in-out;
+    }
+
+    @keyframes abounce5 {
+        0%, 100% {
+            transform: 
+            translate(-2em, 2em) 
+            rotate(250deg)
+            scale(2);
+        }
+
+        50% {
+            transform: 
+            translate(-2em, 3em) 
+            rotate(250deg)
+            scale(2);
+        }
+    }
+
+    .log-pen {
+        color: lighten($hotred-color, 20%);
+        animation: abounce6 4s   infinite  ease-in-out;
+    }
+
+    @keyframes abounce6 {
+        0%, 100% {
+            transform: translate(0, -1.5em) rotate(75deg);
+        }
+
+        50% {
+            transform: translate(0, -2.5em) rotate(75deg);
+        }
+    }
+
+    .log-adobe {
+        color: lighten($hotred-color, 10%);
+        animation: abounce7 4s   infinite  ease-in-out;
+    }
+
+    @keyframes abounce7 {
+        0%, 100% {
+            transform: 
+            translate(1em, -3em) 
+            rotate(65deg)
+            scale(1.5);
+        }
+
+        50% {
+            transform: 
+            translate(1em, -2em) 
+            rotate(65deg)
+            scale(1.5);
+        }
+    }
+
+    .log-tablet {
+        color: lighten($cyan-color, 15%);
+        animation: abounce8 4s   infinite  ease-in-out;
+    }
+
+    @keyframes abounce8 {
+        0%, 100% {
+            transform: 
+            translate(-3em, 4em) 
+            rotate(60deg)
+            scale(.75);
+        }
+
+        50% {
+            transform: 
+            translate(-3em, 5em) 
+            rotate(60deg)
+            scale(.75);
+        }
+    }
+
+}

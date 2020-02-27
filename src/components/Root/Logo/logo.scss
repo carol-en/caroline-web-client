@@ -1,20 +1,53 @@
 @import "../root";
+@import "./style/animation";
+
 
 aside.logo {
     color: $gray-color;
     // border: 2px solid red;
+    display: initial;
+    font-size: 100%;
     cursor: crosshair;
     cursor: url("./images/cursor-black.png"), auto;
     position: absolute;
     z-index: 1;
     text-align: left;
-    top: 3.5em;
-    left: 0;
+    top: 1em;
+    left: 1em;
     @extend %transitions;
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
     -ms-user-select: none;      /* IE 10+ */
     user-select: none;          /* Likely future */ 
+
+    @media(max-width: $breakpoint-l) {
+        font-size: 80%;
+    }
+
+    @media(max-width: $breakpoint-m) {
+        font-size: 75%;
+    }
+
+    @media(max-width: $breakpoint-s) {
+        font-size: 65%;
+    }
+
+    @media(max-width: $breakpoint-xs) {
+        // display: none;
+        font-size: 50%;
+        top: 6em;
+    }
+
+    h2, h3 {
+        margin-bottom: 1%;
+        color: lighten($gray-color, 15%);
+    }
+
+    h2 {
+        font-size: 150%;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
 
     h1 {
         color: darken($hotred-color, 10%);
@@ -30,52 +63,62 @@ aside.logo {
         text-transform: uppercase;
         opacity: 1;
         @extend %transitions;
+
+        @media(max-width: $breakpoint-l) {
+            // display: none;
+            margin-left: 10px;
+        }
     }
 
 }
 
-
-.floating-logos {
-    color: darken($cyan-color, 5%);
-    font-size: 4em;
-    @extend %transitions;
-
-    .log-css {
-        transform: translate(1em, .25em);
-    }
-
-    .log-react {
-        transform: translate(5.5em, -.5em);
-    }
-
-    .log-sass {
-        transform: translate(1em, .25em);
-    }
-
-    .log-js {
-        transform: translate(2em, 2em);
-    }
-
-    .log-brush {
-        transform: translate(-2em, 2em);
-    }
-
-    .log-pen {
-        transform: translate(0, -1.5em);
-    }
-
-    .log-adobe {
-        transform: translate(-3em, 4em);
-    }
-
-    .log-tablet {
-        transform: translate(1em, -3em);
-    }
-
-}
 
 aside.logo:hover {
     opacity: .5; 
-    transform: scale(.95);
- 
+    transform: scale(.95);  
+}
+
+aside.thought-bubble {
+    color: black;
+    padding: .5em 3em;
+    font-size: 100%;
+    border: 2px solid black;
+    background: white;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    font-weight: bold;
+    position: absolute;
+    top: 30em;
+    left: 40em;
+    z-index: 2;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */ 
+
+    @media(max-width: $breakpoint-l) {
+        font-size: 80%;
+        padding: .4em 3em;
+        top: 30em;
+    }
+
+    @media(max-width: $breakpoint-m) {
+        font-size: 75%;
+        top: 30em;
+        left: 34em;
+    }
+
+    @media(max-width: $breakpoint-s) {
+        font-size: 65%;
+        top: 40em;
+        left: 33em;
+
+    }
+
+    @media(max-width: $breakpoint-xs) {
+        // display: none;
+        font-size: 55%;
+        top: 40em;
+    }
+
 }

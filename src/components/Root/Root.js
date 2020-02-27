@@ -3,6 +3,7 @@ import RouterReact from "./RouterReact";
 import "./root.scss";
 import Title from "../Root/style/Title";
 import Nav from "./Nav";
+import Footer from "./Footer";
 
 
 class Root extends Component {
@@ -11,6 +12,7 @@ class Root extends Component {
             <section>
                 <Title />
                 <Nav />
+                <Footer />
                 <RouterReact />
             </section>
         )
