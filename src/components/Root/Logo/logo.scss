@@ -4,17 +4,17 @@
 
 aside.logo {
     background: rgba(255, 255, 255, 0);
+    width: 25%;  
     color: $gray-color;
-    // border: 2px solid red;
-    display: initial;
+    display: inline-block;
     font-size: 100%;
     cursor: crosshair;
     cursor: url("./images/cursor-black.png"), auto;
-    position: fixed;
+    position: absolute;
     z-index: 2;
     text-align: left;
     top: 7em;
-    left: 1em;
+    left: 0;
     @extend %transitions;
     -webkit-user-select: none;  /* Chrome all / Safari all */
     -moz-user-select: none;     /* Firefox all */
@@ -32,8 +32,8 @@ aside.logo {
     }
 
     @media(max-width: $breakpoint-s) {
-        position: static;
-        text-align: center;
+        display: none;
+        postion: static;
     }
 
     h2, h3 {

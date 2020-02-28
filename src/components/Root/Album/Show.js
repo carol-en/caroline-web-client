@@ -3,31 +3,35 @@ import Title from "./Title";
 import { Link } from "react-router-dom";
 import API_URL from "../utils/API";
 import axios from 'axios';
-import "./album.scss";
+import "./show.scss";
 
 class ShowImage extends Component {
     render() {
         let data = this.props.data;
         return (
-            <>
-            <Title />
+                <>                    
+                <aside className="img-section">
+                    <figure>
+                        <img src={data.url} alt={data.name} />
+                    </figure>
+                    </aside>
 
-            <h3>Show Image</h3>
-            <Link to={`/artwork/${data.id}/edit`}>Update Piece</Link>
-            <Link to="/artwork" >Return</Link>
-            <figure>
-                    <img src={data.url} alt={data.name} />
-                    <figcaption>
-                        <ul>
-                            <li><strong>Title: </strong>{data.name}</li>
-                            <li><strong>Medium: </strong>{data.medium}</li>
-                            <li><strong>Category: </strong>{data.category}</li>
-                            <li><strong>Art Type: </strong>{data.kind}</li>
-                        </ul>
-                    </figcaption>
-                </figure>
-                <button onClick={this.props.activeDelete}>Delete</button>
-            </>
+                    <aside className="img-data" >
+                        <strong>Title: </strong>{data.name}<br />
+                        <strong>Medium: </strong>{data.medium}<br />
+                        <strong>Category: </strong>{data.category}<br />
+                        <strong>Art Type: </strong>{data.kind}<br />
+    
+                        <div class="field is-grouped">
+                        <p class="control">
+                            <Link to={`/artwork/${data.id}/edit`} className="button  is-primary is-small">Update Piece</Link> 
+                            <Link to="/artwork" className="button is-link is-small">Return</Link>
+                            <button className="button is-danger is-small" onClick={this.props.activeDelete}>Delete</button>
+                        </p>
+                        </div>
+                    </aside>
+                    
+                </>
         )
     }
 }
@@ -83,11 +87,15 @@ class Show extends Component {
     }
 
     render() {
+
         let data = this.state;
         return (
-        <>
+            <>
+        <Title />
+        <section className="show">
             {!data.deleting ?  <ShowImage data={data} activeDelete={this.activeDelete} /> : <ConfirmDeletion  data={data} activeDelete={this.activeDelete} handleDestroy={this.handleDestroy}/>}
-        </>
+        </section>
+            </>
         )
     }
 }

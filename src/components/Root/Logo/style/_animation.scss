@@ -1,6 +1,7 @@
 
 
 .floating-logos {
+    width: 200%;
     color: darken($cyan-color, 5%);
     font-size: 4em;
     @extend %transitions;

@@ -7,7 +7,7 @@ class Home extends Component {
     render() {
         return (
         <>
-            <main className="wrapper">
+            <main className="home">
                 <Logo />
                 <Canvas />
             </main>

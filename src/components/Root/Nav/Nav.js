@@ -54,10 +54,13 @@ class Nav extends Component {
 
     render() {
         return (
-            <section className="navigate">
-                <button className="burger" onClick={() => this.toggleOpen()}><FontAwesomeIcon icon={faBars} /></button>
+            <aside className="navigate">
+                <button className="burger" onClick={() => this.toggleOpen()}>
+                    <FontAwesomeIcon icon={faBars} />
+                    <h1 className="carol">Caroline Nolasco</h1>
+                </button>
                 {this.state.isOpen && <MenuLinks toggleOpen={this.toggleOpen}/>}
-            </section>
+            </aside>
         )
     }
 }

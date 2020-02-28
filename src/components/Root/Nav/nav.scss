@@ -1,10 +1,11 @@
 @import "../root";
 
-section.navigate {
+aside.navigate {
     background: $red-color;
+    display: block;
     width: 100%;
     position: relative;
-    z-index: 4;
+    z-index: 3;
     top: 0;
     left: 0;
 }
@@ -53,5 +54,20 @@ button.burger {
     @media(min-width: $breakpoint-s) {
         display: none;
     
+    }
+}
+
+h1.carol {
+    display: none;
+    margin-top: 0;
+
+    @media(max-width: $breakpoint-s) {
+        display: inline-block;
+        font-size: 75%;
+        margin-left: 2em;
+    }
+
+    @media(max-width: $breakpoint-xs) {
+        font-size: 60%;
     }
 }

@@ -26,21 +26,28 @@ componentDidMount() {
                 return <h1>Loading...</h1>
             } else {
                 return (
-                    <li key={entry.id}>   
+                    <div key={entry.id} className="image">   
                         <Link to={`/artwork/${entry.id}`}>
                             <img src={entry.thumbnail} alt={entry.name} />
                         </Link>
-                    </li>
+                    </div>
                 )
             }
         });
         return (
             <>
-               <Title />
-                <Link to="/artwork/new">Add New Piece</Link>
-                <ul>
+            <Title />
+            <section className="album">
+                <main className="wrapper">
+                <span className="new-lnk">
+                    <Link to="/artwork/new">Add New Piece</Link>
+                </span>
+                
+                <aside className="art-work">
                     {entry}
-                </ul>
+                </aside>
+                </main>
+            </section>
             </>
         )
     }
