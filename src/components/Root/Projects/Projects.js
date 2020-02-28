@@ -29,7 +29,7 @@ class Projects extends Component {
             } else { 
                 
                 return (
-                    <aside key={entry.sys.id}>
+                    <aside key={entry.sys.id} className="prj-entry">
                         <div className="prj-img">
                             <figure>
                                 <img src={entry.fields.image.fields.file.url} alt={entry.fields.title} />
@@ -37,9 +37,9 @@ class Projects extends Component {
                         </div>
 
                         <div className="prj-info">
-                            <span className="prj-link">
-                                <h2><a href={`/blog/${entry.fields.link}`}>{entry.fields.title}</a></h2> 
-                            </span>
+                                <h2 className="prj-link">
+                                    <a href={`/blog/${entry.fields.link}`}>{entry.fields.title}</a>
+                                </h2> 
                             <Markdown source={entry.fields.description} />
                         </div>                        
                     </aside>
@@ -51,11 +51,7 @@ class Projects extends Component {
             <>
             <Title />
                 <section className="projects">
-                    {entry}
-                    {entry}  
-                    {entry}  
-                    {entry}  
-                    {entry}      
+                    {entry}   
                 </section>
             </>
         )
