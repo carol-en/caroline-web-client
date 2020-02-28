@@ -12,8 +12,8 @@ class Logo extends Component {
                 <h2>Caroline Nolasco <FontAwesomeIcon icon={faGlasses} /> </h2>
                 <h3>Front End Developer | Commercial Illustrator</h3>
                 <h1>
-                    Splashes<br />
-                     of<br />
+                    Splashes
+                     of
                      Color
                 </h1>
                 <div className="floating-logos">
@@ -26,9 +26,6 @@ class Logo extends Component {
                     <FontAwesomeIcon className="fas log-adobe" icon={faAdobe}/>
                     <FontAwesomeIcon className="fas log-tablet" icon={faTablet}/>
                 </div>
-            </aside>
-            <aside className="thought-bubble">
-                Paint Me!
             </aside>
             </>
         )

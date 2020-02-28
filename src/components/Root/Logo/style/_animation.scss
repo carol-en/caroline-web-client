@@ -5,6 +5,9 @@
     font-size: 4em;
     @extend %transitions;
 
+    @media(max-width: $breakpoint-s) { 
+        display: none;
+    }
 
 
     .log-css {

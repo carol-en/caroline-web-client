@@ -1,17 +1,16 @@
 @import "../root";
 
   canvas.hero {
-    background: url("./images/color.jpg")center center no-repeat;
+    position: fixed;
+    background: url("./images/color-b.png")center center no-repeat;
     background-size: cover;
     cursor: crosshair;
     cursor: url("./images/cursor-pink.png"), auto;
-    max-width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
     padding: 0;
     margin: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -3;
 
   }

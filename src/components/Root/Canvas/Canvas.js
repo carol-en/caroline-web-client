@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./canvas.scss";
-import inkImg from "./images/ink.jpg";
+import inkImg from "./images/ink-b.png";
 
 
 
@@ -123,4 +123,4 @@ class Canvas extends Component {
 
 }
 
-export default Canvas
+export default Canvas;

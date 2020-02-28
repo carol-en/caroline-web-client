@@ -11,7 +11,8 @@ class MenuLinks extends Component {
         <nav>
             <Link to="/" className="menu-link">Home</Link>
             <Link to="/about" className="menu-link">About</Link>
-            <Link to="/portfolio" className="menu-link">Portfolio</Link>
+            <Link to="/projects" className="menu-link">Code Projects</Link>
+            <Link to="/artwork" className="menu-link">Art Projects</Link>
             <Link to="/blog" className="menu-link">Blog</Link>
             <Link to="/contact" className="menu-link">Contact</Link>
         </nav>
@@ -53,11 +54,9 @@ class Nav extends Component {
 
     render() {
         return (
-            <section>
+            <section className="navigate">
                 <button className="burger" onClick={() => this.toggleOpen()}><FontAwesomeIcon icon={faBars} /></button>
-                {this.state.isOpen && <MenuLinks />}
-
-                
+                {this.state.isOpen && <MenuLinks toggleOpen={this.toggleOpen}/>}
             </section>
         )
     }

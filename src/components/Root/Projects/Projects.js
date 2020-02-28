@@ -19,27 +19,30 @@ class Projects extends Component {
     }
     render() {
         let entries = this.state.entries;
-        const entry = entries.map((entry, i) => {
+        const entry = entries.map(entry => {
            if(!entry) {
                 return (
-                    <li>
+                    <>
                         <h2>Loading...</h2>
-                    </li>
+                    </>
                 )
             } else { 
                 
                 return (
-                    <li key={i}>
-                        <h2><a href={`/blog/${entry.fields.link}`}>{entry.fields.title}</a></h2> 
-                        <h4>{entry.fields.date}</h4>
-                        <blockquote>
-                            <Markdown source={entry.fields.description} />
+                    <aside key={entry.sys.id}>
+                        <div className="prj-img">
                             <figure>
                                 <img src={entry.fields.image.fields.file.url} alt={entry.fields.title} />
                             </figure>
-                        </blockquote>
-                        
-                    </li>
+                        </div>
+
+                        <div className="prj-info">
+                            <span className="prj-link">
+                                <h2><a href={`/blog/${entry.fields.link}`}>{entry.fields.title}</a></h2> 
+                            </span>
+                            <Markdown source={entry.fields.description} />
+                        </div>                        
+                    </aside>
             )
             }
         
@@ -47,13 +50,17 @@ class Projects extends Component {
         return (
             <>
             <Title />
-                <ul>
+                <section className="projects">
                     {entry}
-                </ul>
+                    {entry}  
+                    {entry}  
+                    {entry}  
+                    {entry}      
+                </section>
             </>
         )
     }
 }
 
 
-export default Projects
+export default Projects;

@@ -1,6 +1,5 @@
 import { Route, Switch } from "react-router-dom";
 import React, { Component } from "react";
-import Portfolio from "../Portfolio";
 import Home from "../Home";
 import About from "../About";
 import Edit from "../Album/Edit";
@@ -20,7 +19,6 @@ class RouterReact extends Component {
         <>
         <Switch>
             <Route component ={About} exact path="/about" />
-            <Route component ={Portfolio} exact path="/portfolio" />
             <Route component ={Projects} exact path="/projects" />
             <Route component ={New} exact path="/artwork/new" />
             <Route component ={Edit} path="/artwork/:id/edit" />

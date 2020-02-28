@@ -9,12 +9,12 @@ import Footer from "./Footer";
 class Root extends Component {
     render() {
         return (
-            <section>
+            <>
                 <Title />
                 <Nav />
                 <Footer />
                 <RouterReact />
-            </section>
+            </>
         )
     }
 }
