@@ -40,45 +40,65 @@ class New extends Component {
         return (
             <>
             <Title />
-            
-                <h1>New Art Work Component</h1>
+            <section className="form">
+            <aside className="form-content">
+                <h1 className="form-pg">Add New Art</h1>
                 <form onSubmit={this.handleSubmit}>
-                    <div>
-                    <label htmlFor="name"> Piece Name<br /></label>
-                        <input type="text" value={this.state.value} id="name" placeholder="Piece Name" onChange={this.handleChange}required />
+                    <div className="field">
+                    <label htmlFor="name" className="label"> Piece Name</label>
+                    <div className="control">
+                        <input className="input is-small is-rounded" type="text" value={this.state.value} id="name" placeholder="Piece Name" onChange={this.handleChange}required />
+                        </div>
                     </div>
 
-                    <div>
-                    <label htmlFor="thumbnail"> Thumbnail<br /></label>
-                        <input type="text" value={this.state.value} id="thumbnail" placeholder="thumbnail" onChange={this.handleChange} required />
+                    <div className="field">
+                    <label htmlFor="thumbnail" className="label"> Thumbnail</label>
+                    <div className="control">
+                        <input className="input is-small is-rounded" type="text" value={this.state.value} id="thumbnail" placeholder="thumbnail" onChange={this.handleChange} required />
+                        </div>
                     </div>
 
-                    <div>
-                    <label htmlFor="url"> Image URL<br /></label>
-                        <input type="text" value={this.state.value} id="url" placeholder="http://" onChange={this.handleChange} required />
+                    <div className="field">
+                    <label htmlFor="url" className="label"> Image URL</label>
+                    <div className="control">
+                        <input className="input is-small is-rounded" type="text" value={this.state.value} id="url" placeholder="http://" onChange={this.handleChange} required />
+                        </div>
                     </div>
 
-                    <div>
-                    <label htmlFor="medium"> Medium<br /></label>
-                        <input type="text" value={this.state.value} id="medium" placeholder="PS, Oils.." onChange={this.handleChange} required />
+                    <div className="field">
+                    <label htmlFor="medium" className="label"> Medium</label>
+                    <div className="control">
+                        <input className="input is-small is-rounded" type="text" value={this.state.value} id="medium" placeholder="PS, Oils.." onChange={this.handleChange} required />
+                        </div>
                     </div>
 
-                    <div>
-                    <label htmlFor="category"> Category<br /></label>
-                        <input type="text" value={this.state.value} id="category" placeholder="Paid, personal, donation...etc" onChange={this.handleChange} required />
+                    <div className="field">
+                    <label htmlFor="category" className="label"> Category</label>
+                    <div className="control">
+                        <input className="input is-small is-rounded" type="text" value={this.state.value} id="category" placeholder="Paid, personal, donation...etc" onChange={this.handleChange} required />
+                        </div>
                     </div>
 
-                    <div>
-                    <label htmlFor="kind"> Art Type<br /></label>
-                        <input type="text" value={this.state.value} id="kind" placeholder="Comics? Illustration? Painting?" onChange={this.handleChange} required />
+                    <div className="field">
+                    <label htmlFor="kind" className="label"> Art Type</label>
+                    <div className="control">
+                        <input className="input is-small is-rounded" type="text" value={this.state.value} id="kind" placeholder="Comics? Illustration? Painting?" onChange={this.handleChange} required />
+                        </div>
                     </div>
 
-                    <div>
-                        <input type="submit" value="Submit New Piece" />
-                        <Link to="/artwork">Cancel</Link>
+                    <div class="field is-grouped">
+                        <div class="control">
+                        <input type="submit" value="Submit New Piece"  className="button is-small is-danger" />
+                        </div>
+
+                        <div class="control">
+                        <Link to="/artwork" className="button is-small is-primary">Cancel</Link>
+                        </div>
                     </div>
                 </form>
-            </>
+                </aside>
+            </section>
+        </>
         )
     }
 }

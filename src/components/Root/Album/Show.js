@@ -3,7 +3,7 @@ import Title from "./Title";
 import { Link } from "react-router-dom";
 import API_URL from "../utils/API";
 import axios from 'axios';
-import "./show.scss";
+import "./album.scss";
 
 class ShowImage extends Component {
     render() {
@@ -12,23 +12,23 @@ class ShowImage extends Component {
                 <>                    
                 <aside className="img-section">
                     <figure>
-                        <img src={data.url} alt={data.name} />
+                        <a href={data.url}><img src={data.url} alt={data.name} /></a>
                     </figure>
                     </aside>
 
                     <aside className="img-data" >
-                        <strong>Title: </strong>{data.name}<br />
-                        <strong>Medium: </strong>{data.medium}<br />
-                        <strong>Category: </strong>{data.category}<br />
-                        <strong>Art Type: </strong>{data.kind}<br />
+                        <p>
+                            <strong>Title: </strong>{data.name}<br />
+                            <strong>Medium: </strong>{data.medium}<br />
+                            <strong>Category: </strong>{data.category}<br />
+                            <strong>Art Type: </strong>{data.kind}<br />
+                        </p>
     
-                        <div class="field is-grouped">
                         <p class="control">
                             <Link to={`/artwork/${data.id}/edit`} className="button  is-primary is-small">Update Piece</Link> 
                             <Link to="/artwork" className="button is-link is-small">Return</Link>
                             <button className="button is-danger is-small" onClick={this.props.activeDelete}>Delete</button>
                         </p>
-                        </div>
                     </aside>
                     
                 </>

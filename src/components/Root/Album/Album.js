@@ -39,9 +39,7 @@ componentDidMount() {
             <Title />
             <section className="album">
                 <main className="wrapper">
-                <span className="new-lnk">
-                    <Link to="/artwork/new">Add New Piece</Link>
-                </span>
+                    <Link to="/artwork/new" className="button is-danger is-small">Add New Piece</Link>
                 
                 <aside className="art-work">
                     {entry}
