@@ -45,7 +45,7 @@ class Projects extends Component {
                                 </h2> 
                                 <span className="prj-links">
                                 <a href={entry.fields.appLink}><FontAwesomeIcon  icon={faMobile} />  Open App</a>
-                                <a href={entry.fields.gitLink}><FontAwesomeIcon  icon={faGithub} />  Open GitHub</a>
+                                <a href={entry.fields.githubLink}><FontAwesomeIcon  icon={faGithub} />  Open GitHub</a>
                                 </span>
                             <Markdown source={entry.fields.description} />
                         </div>                        
