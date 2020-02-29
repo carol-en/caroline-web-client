@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Splashes of Color
+A brand spanking new update of my portfolio site, updated from head to toe from the first time since 2016. Originally created using static pages in PHP with a gallery using [Coppermine Gallery](https://coppermine-gallery.net/). This new version, the biggest thing I wanted to do was marry my two skill sets: coding and illustration and I knew from the start I wanted something interactive, such as having the visitor 'paint' in a specially created art piece. Not only that but I wanted to create my own personal gallery/portfolio app rather than rely on someone elses's; all while using new and updated tech. I think I did a fairly good job.
 
-## Available Scripts
+##### [Back End Github Here!](https://github.com/carol-en/caroline-web-app-api-backend)
 
-In the project directory, you can run:
+## The Site
 
-### `yarn start`
+##### The Main Page
+The first thing I did was entirely scrap using PHP, I instead settled on using Rails as as my server and React for my front end. For my chosen piece of tech for interactivity  I settled on drawing with canvas, a challenge on its own but even more so when combined with React. In Javascript a canvas pulls and manipulates elements directly from the DOM... something React does _NOT_ do. Needless to say making the two work was a learning process but I got there in the end!
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+##### My Gallery
+My Gallery page runs on React with all information in Rails, with the help of Axios I've managed to create simple CRUD app doing what I need. It still has some ways to go and as such not entirely  ready for production. It requires authentication still, on top of that I would like some advanced filtering for different categories. All which  
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+##### The Rest
+The rest of the content on my site is handled by Contentful with React Router helping to navigate through the various pages on my site! I'm happy to say that my styling is responsive and mobile friendly, even the interactive canvas–– all created with Sass. My only hope in the near future is to add some animation to my site to make it even more dynamic.
 
-### `yarn test`
+### Tech Used
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- React Router
+- React Helmet
+- React Markdown
+- Contentful
+- Node Sass
+- Bulma
+- FortAwesome
+- Throttle
+- Axios
 
-### `yarn build`
+### Resources Used
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- [Canvas Scratch Off Reveal](https://codemyui.com/html5-canvas-scratch-off-reveal-image-animation/)
+- [Canvas Image Cover](https://codepen.io/supah/pen/BaNBmmw)
+- [Devgg Fonticon](https://github.com/devgg/FontIcon)
+- [Fonts and Colors](https://www.colorsandfonts.com/)
+- [Font Spark](https://fontspark.app/)
+- [Collection UI](http://collectui.com/challenges/sign-up)
