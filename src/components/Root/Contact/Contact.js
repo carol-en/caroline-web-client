@@ -20,16 +20,14 @@ class Contact extends Component {
     article() {
         let entry = this.state.entry;
         if(!entry) {
-            return <h1>Loading...</h1>
+            return <h1 className="pg">Loading...</h1>
          } else {
              
               return (
-                 <li key= {entry.sys.id}>
-                        <h2>{entry.fields.title}</h2> 
-                        <blockquote>
+                 <aside className="contact-data" key= {entry.sys.id}>
+                        <h2 className="pg">{entry.fields.title}</h2> 
                             <Markdown source={entry.fields.body} />
-                        </blockquote>
-                 </li>
+                 </aside>
              )
          }
     }
@@ -39,9 +37,9 @@ class Contact extends Component {
             <>
             <Title />
 
-                <ul>
+                <section className="contact">
                     {entry}
-                </ul>
+                </section>
             </>
         )
     }

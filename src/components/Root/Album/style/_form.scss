@@ -1,24 +1,7 @@
 
-
-h1.form-pg {
-    color: $red-color;
-    font-size: 200%;
-    margin: .5em;
-
-    @media(max-width: $breakpoint-s) {
-        font-size: 150%;
-        margin: .25em;
-    }
-}
-
-section.form {
-    background: darken($gray-color,15%);
-}
-
 label.label {
     color: $cyan-color;
     font-family: $Overpass-Mono;
-    // font-weight: lighter;
     font-size: 105%;
 
     @media(max-width: $breakpoint-s) {

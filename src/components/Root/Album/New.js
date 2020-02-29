@@ -42,7 +42,7 @@ class New extends Component {
             <Title />
             <section className="form">
             <aside className="form-content">
-                <h1 className="form-pg">Add New Art</h1>
+                <h1 className="pg">Add New Art</h1>
                 <form onSubmit={this.handleSubmit}>
                     <div className="field">
                     <label htmlFor="name" className="label"> Piece Name</label>

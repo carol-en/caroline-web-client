@@ -9,7 +9,7 @@ class ShowImage extends Component {
     render() {
         let data = this.props.data;
         return (
-                <>                    
+            <article className="page-entry">                    
                 <aside className="img-section">
                     <figure>
                         <a href={data.url}><img src={data.url} alt={data.name} /></a>
@@ -24,14 +24,14 @@ class ShowImage extends Component {
                             <strong>Art Type: </strong>{data.kind}<br />
                         </p>
     
-                        <p class="control">
+                        <p className="control">
                             <Link to={`/artwork/${data.id}/edit`} className="button  is-primary is-small">Update Piece</Link> 
                             <Link to="/artwork" className="button is-link is-small">Return</Link>
                             <button className="button is-danger is-small" onClick={this.props.activeDelete}>Delete</button>
                         </p>
                     </aside>
                     
-                </>
+                </article>
         )
     }
 }
@@ -41,11 +41,13 @@ class ConfirmDeletion extends Component {
     render() {
         let data = this.props.data;
         return (
-            <>
-                <h1>Are You Sure You Want To Delete This Entry?</h1>
-                <button onClick={() => {this.props.handleDestroy(data)}}>Delete Entry</button>
-                <button onClick= {this.props.activeDelete}>Cancel</button>
-            </>
+            <article className="delete-entry">
+                <h1 className="pg">Are You Sure You Want To Delete This Entry?</h1>
+                <p>
+                    <button className="button is-danger" onClick={() => {this.props.handleDestroy(data)}}>Delete Entry</button>
+                    <button className="button is-primary" onClick= {this.props.activeDelete}>Cancel</button>
+                </p>
+            </article>
         )
     }
 }

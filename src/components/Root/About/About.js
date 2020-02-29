@@ -20,16 +20,14 @@ class About extends Component {
     article() {
         let entry = this.state.entry;
         if(!entry) {
-            return <h1>Loading...</h1>
+            return <h1 className="pg">Loading...</h1>
          } else {
              
               return (
-                 <li key= {entry.sys.id}>
-                        <h2>{entry.fields.title}</h2> 
-                        <blockquote>
+                 <aside className="about-data" key= {entry.sys.id}>
+                        <h2 className="pg">{entry.fields.title}</h2> 
                             <Markdown source={entry.fields.body} />
-                        </blockquote>
-                 </li>
+                 </aside>
              )
          }
     }
@@ -38,13 +36,14 @@ class About extends Component {
         return (
             <>
             <Title />
-                <ul>
+                <section className="about">
                     {entry}
-                </ul>
+                   
+                </section>
             </>
         )
     }
 }
 
 
-export default About
+export default About;

@@ -3,10 +3,6 @@
 @import "./style/show";
 @import "./style/form";
 
-section.album {
-    // height: 100%;
-    background: darken($gray-color,15%);
-}
 
 main.wrapper {
     background:  darken($gray-color, 14%);
@@ -55,4 +51,15 @@ div.image {
 div.image:hover {
     background: lighten($cyan-color, 35%);
     transform: scale(1.05);
+}
+
+h1.pg {
+    color: $red-color;
+    font-size: 200%;
+    margin: .5em;
+
+    @media(max-width: $breakpoint-s) {
+        font-size: 150%;
+        margin: .25em;
+    }
 }

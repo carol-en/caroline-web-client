@@ -1,0 +1,58 @@
+@import "../root";
+
+
+
+section.contact {
+    color: lighten($gray-color, 30%);
+    font-size: 100%;
+    padding-top: 4rem;
+}
+
+.pg {
+    color: $cyan-color;
+    font-size: 300%;
+
+    @media(max-width: $breakpoint-s) {
+        font-size: 250%;
+        margin: .25em;
+    }
+}
+
+aside.contact-data {
+    background:  darken($gray-color, 13%);
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    box-shadow:
+    darken($gray-color, 12%) 0px 0px 5px; 
+
+    @media (max-width: $breakpoint-m) {
+        width: 85%;
+        padding: 1rem;
+    }
+
+    @media (max-width: $breakpoint-s) {
+        width: 90%;
+        padding: .5rem;
+    }
+
+    a {
+        color: $red-color;
+    }
+    
+    a:hover {
+        color: $cyan-color;
+    }
+}
+
+aside.contact-data p {
+    margin: 1em;
+    font-size: 140%;
+    line-height: 2em;
+    letter-spacing: .02em;
+
+    @media (max-width: $breakpoint-m) {
+        font-size: 120%;
+    }
+
+}

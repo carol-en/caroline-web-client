@@ -23,7 +23,7 @@ componentDidMount() {
         
        const entry = album.map(entry => {
             if(!entry) {
-                return <h1>Loading...</h1>
+                return <h1 className="pg">Loading...</h1>
             } else {
                 return (
                     <div key={entry.id} className="image">   
@@ -39,7 +39,7 @@ componentDidMount() {
             <Title />
             <section className="album">
                 <main className="wrapper">
-                    <Link to="/artwork/new" className="button is-danger is-small">Add New Piece</Link>
+                    <Link to="/artwork/new" className="button is-danger">Add New Piece</Link>
                 
                 <aside className="art-work">
                     {entry}

@@ -60,6 +60,7 @@ class Edit extends Component {
             <Title />
             <section className="form">
             <aside className="form-content">
+                <h1 className="pg">Update {this.state.name}</h1>
                 <form onSubmit={this.handleUpdate}>
 
                     <div className="field">
