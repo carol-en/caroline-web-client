@@ -39,20 +39,16 @@
         .prj-info {
             width: 100%;
             font-weight: lighter;
-            color: lighten($gray-color, 30%);
+            color: lighten($gray-color, 60%);
             margin-left: 1em;
             padding: 1rem;
             text-align: center;
 
-            h2.prj-link a {
+            h2.prj-title {
                 font-size: 175%;
                 text-transform: lowercase;
                 font-weight: lighter;
-                color: $red-color;
-            }
-
-            h2.prj-link a:hover {
-                color: lighten($hotred-color, 10%);
+                color: $cyan-color;
             }
         }
 
@@ -71,4 +67,21 @@ aside.prj-entry:hover .prj-img {
 aside.prj-entry:hover {
     transform: scale(1.2);
     background: darken($gray-color, 11%);
+}
+
+span.prj-links  {
+    display: block;
+    margin: 1%;
+    color: $red-color;
+
+    
+    a {
+        color: $red-color;
+        padding-right: .01%;
+        padding-right: 3%;
+    }
+
+    a:hover {
+        color: lighten($red-color, 10%);
+    }
 }

@@ -3,9 +3,17 @@
 
 
 section.contact {
-    color: lighten($gray-color, 30%);
+    color: lighten($gray-color, 60%);
     font-size: 100%;
     padding-top: 4rem;
+
+    @media(max-width: $breakpoint-s) {
+        font-size: 95%;
+    }
+
+    @media(max-width: $breakpoint-xs) {
+        font-size: 75%;
+    }
 }
 
 .pg {
@@ -43,6 +51,11 @@ aside.contact-data {
     a:hover {
         color: $cyan-color;
     }
+
+    strong {
+        font-weight: bold;
+        color: $cyan-color;
+    }
 }
 
 aside.contact-data p {
@@ -55,4 +68,39 @@ aside.contact-data p {
         font-size: 120%;
     }
 
+}
+
+.s-media {
+    width: 100%;
+    display: block;
+    font-size: 300%;
+    color: $red-color;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-around;
+
+
+    span {
+        display: block;
+        @extend %transitions;
+
+        a {
+            color: $red-color;
+        }
+
+        a:hover {
+            color: $cyan-color;
+        }
+    }
+
+    span:hover {
+        transform: scale(1.5) rotate(180deg);
+    }
+}
+
+h3.sm {
+    font-size: 150%;
+    border-left: 1em solid $cyan-color;
+    padding-left: 1rem;
+    color: $cyan-color;
 }

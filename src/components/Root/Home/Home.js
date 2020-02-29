@@ -6,12 +6,10 @@ import "./home.scss";
 class Home extends Component {
     render() {
         return (
-        <>
-            <main className="home">
-                <Logo />
-                <Canvas />
-            </main>
-        </>
+        <main className="home">
+            <Logo />
+            <Canvas />
+        </main>
         )
     }
 }

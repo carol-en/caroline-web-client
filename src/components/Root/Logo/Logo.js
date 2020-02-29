@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faAdobe, faSass, faJsSquare, faCss3 } from '@fortawesome/free-brands-svg-icons';
-import { faPaintBrush, faPenFancy, faTablet, faGlasses } from '@fortawesome/free-solid-svg-icons'
+import { faPaintBrush, faPenFancy, faTablet, faGlasses } from '@fortawesome/free-solid-svg-icons';
 import  './logo.scss';
 
 class Logo extends Component {

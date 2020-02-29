@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Markdown from "react-markdown";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faMobile } from '@fortawesome/free-solid-svg-icons';
 import Title from "./Title";
 import client from "../utils/contentful";
 import "./projects.scss";
@@ -37,9 +40,13 @@ class Projects extends Component {
                         </div>
 
                         <div className="prj-info">
-                                <h2 className="prj-link">
-                                    <a href={`/blog/${entry.fields.link}`}>{entry.fields.title}</a>
+                                <h2 className="prj-title">
+                                    {entry.fields.title}
                                 </h2> 
+                                <span className="prj-links">
+                                <a href={entry.fields.appLink}><FontAwesomeIcon  icon={faMobile} />  Open App</a>
+                                <a href={entry.fields.gitLink}><FontAwesomeIcon  icon={faGithub} />  Open GitHub</a>
+                                </span>
                             <Markdown source={entry.fields.description} />
                         </div>                        
                     </aside>

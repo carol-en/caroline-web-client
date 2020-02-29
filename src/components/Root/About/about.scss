@@ -3,9 +3,17 @@
 
 
 section.about {
-    color: lighten($gray-color, 30%);
+    color: lighten($gray-color, 60%);
     font-size: 100%;
-    padding-top: 4rem;
+    padding-top: 2rem;
+
+    @media(max-width: $breakpoint-s) {
+        font-size: 95%;
+    }
+
+    @media(max-width: $breakpoint-xs) {
+        font-size: 75%;
+    }
 }
 
 .pg {
@@ -42,6 +50,19 @@ aside.about-data {
     
     a:hover {
         color: $cyan-color;
+    }
+
+    strong {
+        font-weight: bold;
+        color: $cyan-color;
+    }
+
+    img {
+        float: left;
+        max-width: 15%;
+        height: auto;
+        margin: 0 .5em .25em 0;
+        border: .15em solid $cyan-color;
     }
 }
 
