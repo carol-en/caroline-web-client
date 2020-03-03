@@ -6,6 +6,9 @@ import "./home.scss";
 class Home extends Component {
 
     componentDidMount = () => {
+        fetch("https://art-marks-server.herokuapp.com/my_bookmarks", {mode: 'no-cors'})
+         .then(res => console.log("woke up art marks server"));
+
         fetch("https://art-marks-client.herokuapp.com/", {mode: 'no-cors'})
          .then(res => console.log("woke up art marks"));
 
