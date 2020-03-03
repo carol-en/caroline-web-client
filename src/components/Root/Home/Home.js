@@ -17,6 +17,9 @@ class Home extends Component {
 
          fetch("https://art-planner-heroku.herokuapp.com/planner", {mode: 'no-cors'})
          .then(res => console.log("woke up art planner"));
+
+         fetch("https://left4dead-mini-game.herokuapp.com/", {mode: 'no-cors'})
+         .then(res => console.log("woke up art left4dead mini game"));
     }
     render() {
         return (
