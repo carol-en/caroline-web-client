@@ -11,29 +11,29 @@ class Album extends Component {
         album: []
     }
 
-componentDidMount() {
-      axios.get(API_URL)
-      .then(res => {
-        this.setState({ album: res.data })
-      });
-    }
+// componentDidMount() {
+//       axios.get(API_URL)
+//       .then(res => {
+//         this.setState({ album: res.data })
+//       });
+//     }
 
     render() {
-        let album = this.state.album;
+    //     let album = this.state.album;
         
-       const entry = album.map(entry => {
-            if(!entry) {
-                return <h1 className="pg">Loading...</h1>
-            } else {
-                return (
-                    <div key={entry.id} className="image">   
-                        <Link to={`/artwork/${entry.id}`}>
-                            <img src={entry.thumbnail} alt={entry.name} />
-                        </Link>
-                    </div>
-                )
-            }
-        });
+    //    const entry = album.map(entry => {
+    //         if(!entry) {
+    //             return <h1 className="pg">Loading...</h1>
+    //         } else {
+    //             return (
+    //                 <div key={entry.id} className="image">   
+    //                     <Link to={`/artwork/${entry.id}`}>
+    //                         <img src={entry.thumbnail} alt={entry.name} />
+    //                     </Link>
+    //                 </div>
+    //             )
+    //         }
+    //     });
         return (
             <>
             <Title />
@@ -42,7 +42,7 @@ componentDidMount() {
                     <Link to="/artwork/new" className="button is-danger">Add New Piece</Link>
                 
                 <aside className="art-work">
-                    {entry}
+                    {/* {entry} */}
                 </aside>
                 </main>
             </section>

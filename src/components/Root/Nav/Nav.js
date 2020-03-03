@@ -12,7 +12,7 @@ class MenuLinks extends Component {
             <Link to="/" className="menu-link">Home</Link>
             <Link to="/about" className="menu-link">About</Link>
             <Link to="/projects" className="menu-link">Code Projects</Link>
-            <Link to="/artwork" className="menu-link">Art Projects</Link>
+            <Link to="/art" className="menu-link">Art Work</Link>
             <Link to="/contact" className="menu-link">Contact</Link>
         </nav>
         )
