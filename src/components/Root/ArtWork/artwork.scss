@@ -1,0 +1,54 @@
+@import "../root";
+
+.artwork {
+    overflow: auto;
+    background: darken($gray-color,15%);
+}
+
+aside.art-wrapper {
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 1.25rem;
+    background: darken($gray-color,12%);
+    text-align: center;
+    width: 75%;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-around;
+
+    @media(max-width: $breakpoint-m) {
+        width: 85%;
+        padding: .75rem;
+    }
+
+    @media(max-width: $breakpoint-s) {
+        width: 90%;
+        padding: .5rem;
+        flex-flow: nowrap column;
+        margin: 1.5em auto;
+    }
+
+    @media(max-width: $breakpoint-xs) {
+        padding: .25rem;
+    }
+}
+
+.thumbnails {
+    padding: 0;
+    margin: 2em;
+
+    img {
+        max-width: 75%;
+        height: auto;
+        @extend %transitions;
+    }
+
+    a img {
+        border: 2em solid $red-color;
+    }
+
+
+    a img:hover {
+        border: 2em solid lighten($cyan-color, 20%);
+    }
+}

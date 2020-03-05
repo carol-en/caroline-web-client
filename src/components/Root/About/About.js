@@ -17,27 +17,18 @@ class About extends Component {
 
     }
 
-    article() {
-        let entry = this.state.entry;
-        if(!entry) {
-            return <h1 className="pg">Loading...</h1>
-         } else {
-             
-              return (
-                 <aside className="about-data" key= {entry.sys.id}>
-                        <h2 className="pg">{entry.fields.title}</h2> 
-                            <Markdown source={entry.fields.body} />
-                 </aside>
-             )
-         }
-    }
     render() {
-        let entry = this.article();
+        let entry = this.state.entry; 
+        
         return (
             <>
             <Title />
                 <section className="about">
-                    {entry}
+                    {entry && 
+                    <aside className="about-data" key= {entry.sys.id}>
+                            <h2 className="pg">{entry.fields.title}</h2> 
+                                <Markdown source={entry.fields.body} />
+                    </aside> }
                    
                 </section>
             </>

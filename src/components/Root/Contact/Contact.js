@@ -19,17 +19,18 @@ class Contact extends Component {
 
     }
 
-    article() {
+    render() {
         let entry = this.state.entry;
-        if(!entry) {
-            return <h1 className="pg">Loading...</h1>
-         } else {
-             
-              return (
-                 <aside className="contact-data" key= {entry.sys.id}>
-                        <h2 className="pg">{entry.fields.title}</h2> 
-                            <Markdown source={entry.fields.body} />
+        return (
+            <>
+            <Title />
 
+                <section className="contact">
+                {entry && 
+                    <aside className="contact-data" key= {entry.sys.id}>
+                        <h2 className="pg">{entry.fields.title}</h2> 
+                        <Markdown source={entry.fields.body} />
+            
                         <h3 className="sm">Find me @</h3>
                             <div className="s-media">
                                 <span>
@@ -51,18 +52,7 @@ class Contact extends Component {
                                     <a href="https://www.deviantart.com/carol-n92" title="Deviant Art"><FontAwesomeIcon icon={faDeviantart} /></a>
                                 </span>
                             </div>
-                 </aside>
-             )
-         }
-    }
-    render() {
-        let entry = this.article();
-        return (
-            <>
-            <Title />
-
-                <section className="contact">
-                    {entry}
+                    </aside>}
                 </section>
             </>
         )

@@ -17,31 +17,30 @@ class ArtWork extends Component {
 
     }
     render() {
-        let entries = this.state.entries;
-        const entry = entries.map((entry, i) => {
-           if(!entry) {
+        const entry = this.state.entries.map((entry, i) => {
+            let fullImage = entry.fields.fullImage;
                 return (
-                    <li>
-                        <h2>Loading...</h2>
-                    </li>
-                )
-            } else { 
-                return (
-                    <li key={i}>
+                    <div key={i} className="thumbnails">
                         <Link to= {`/art/${entry.sys.id}`}>
-                            <img src={entry.fields.thumbnail.fields.file.url} alt={entry.fields.title} />
+                            {fullImage.map((img, i) => {
+                            const { url, fileName } = img.fields.file;
+                            const ratio = "?fit=thumb&f=face&h=300&w=300";
+                            const thumbnail = `${url}${ratio}`;
+
+                            if(i < 1) return  <img src={thumbnail} alt={fileName} key={i}/>
+                            }) }
                         </Link> 
-                    </li>
-            )
-            }
-        
+                    </div>
+                )
         });
         return (
             <>
             <Title />
-                <ul>
-                    {entry}
-                </ul>
+            <section className="artwork">
+                <aside className="art-wrapper">
+                    {this.state.entries && entry }
+                </aside>
+            </section>
             </>
         )
     }
