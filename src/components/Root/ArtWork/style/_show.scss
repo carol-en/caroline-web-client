@@ -1,0 +1,135 @@
+
+
+.show-page {
+    overflow: auto;
+    background: darken($gray-color,15%);
+}
+
+aside.art-data {
+    margin: 0 auto;
+    padding: 1.25rem;
+    max-width: 85%;
+    background: darken($gray-color,12%);
+
+    @media(max-width: $breakpoint-s) {
+        padding: 1rem;
+    }
+}
+
+figure.images {
+    background: darken($gray-color,10%);
+    max-width: 100%;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    flex-flow: nowrap row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    @media(max-width: $breakpoint-s) {
+        padding: 1rem;
+    }
+
+    @media(max-width: $breakpoint-xs)  {
+        flex-flow: nowrap column;
+        padding: .5rem;
+    }
+
+
+    img {
+        max-width: 75%;
+        height: auto;
+        margin: 0;
+        @extend %transitions;
+
+        @media(max-width: $breakpoint-xs)  {
+            max-width: 90%;
+        }
+    }
+
+    a img {
+        border: 1em solid $red-color;
+
+        @media(max-width: $breakpoint-s) {
+            border: .75em solid $red-color;
+        }
+
+        @media(max-width: $breakpoint-xs) {
+            margin-bottom: 1em;
+        }
+    }
+
+    a img:hover {
+        border: 1em solid lighten($cyan-color, 30%);
+
+        @media(max-width: $breakpoint-s) {
+            border: .75em solid lighten($cyan-color, 30%);
+        }
+    }
+}
+
+span.art-images {
+    display: block;
+    text-align: center;
+}
+
+.image-info {
+    padding: 2rem;
+    font-size: 100%;
+
+    h1 {
+        font-size: 2em;
+        color: $cyan-color;
+    }
+
+    li {
+        margin: .25em;
+    }
+
+    span.tag {
+        display: inline-block;
+        background: darken($gray-color,7%);
+        padding: .50% .70%;
+        margin: 0;
+        margin-right: .5em;
+        @extend %transitions;
+    }
+
+    span.tag:hover {
+        padding: .90% 1%;
+        background: desaturate($cyan-color, 80);
+        color: $cream-color;
+        cursor: crosshair;
+    }
+
+    @media(max-width: $breakpoint-s) {
+        text-align: center;
+    }
+
+    @media(max-width: $breakpoint-xs) {
+        text-align: center;
+        padding: 1rem;
+        font-size: 90%;
+    }
+}
+
+.info-list strong {
+    color: desaturate($cyan-color, 50);
+    font-family: $Overpass-Mono; 
+    text-transform: uppercase;
+}
+
+li.image-desc {
+    color: desaturate(darken($cream-color, 30%), 50);
+    font-weight: normal;
+    padding: .50rem;
+
+    a {
+        color: $red-color;
+    }
+    
+    a:hover {
+        color: $cyan-color;
+    }
+}

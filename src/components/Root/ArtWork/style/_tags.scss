@@ -1,0 +1,32 @@
+aside.tags {
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 0;
+    background: darken($gray-color,15%);
+    width: 75%;
+    display: flex;
+    flex-flow: nowrap row;
+
+    button.btn-filter {
+        background: $red-color;
+        border: 0;
+        font-family: $Overpass-Mono;
+        color: $white-color;
+        cursor: pointer;
+        padding: .25rem .75rem;
+        margin: .25em;
+        font-size: 90%;
+        @extend %transitions;
+
+        @media(max-width: $breakpoint-s) {
+            padding: .15rem .65rem;
+            margin: .15em;
+            font-size: 80%;
+        }
+    
+    }
+
+    button.btn-filter:hover {
+        background: $cyan-color;
+    }
+}

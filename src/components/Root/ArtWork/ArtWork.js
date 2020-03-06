@@ -4,18 +4,64 @@ import client from "../utils/contentful";
 import { Link } from "react-router-dom";
 import "./artwork.scss";
 
+class FilterButtons extends Component {
+    render() {
+        const filterImages = this.props.filterImages;
+        const tags = this.props.tags.map((tag, i) => {
+            if(tag === "personal" || tag === "commission" || tag === "inks" || tag === "color work") {
+                return (
+                    <button key={i} className="btn-filter" onClick={() => {filterImages(tag)}}>
+                        {tag}
+                    </button>
+                )
+            }
+        });
+        return (
+            <aside className="tags">
+                {tags && tags}
+            </aside>
+        )
+    }
+}
+
 class ArtWork extends Component {
     state = {
-        entries: []
+        entries: [],
+        tags: [],
+        currentFilter: []
     }
     componentDidMount () {
-
-          client.getEntries({
-              "content_type": "artWork"
-          })
-            .then(entries => this.setState({ entries: entries.items }))
+        this.getData();
 
     }
+
+    getData = () => {      
+        client.getEntries({
+            "content_type": "artWork"
+        })
+          .then(entries => this.setState({ entries: entries.items }))
+
+      client.getContentType('artWork')
+          .then(data => data.fields.map(e => {
+              if(e.id === "tags") {
+                  let tags = e.items.validations[0].in;
+                  this.setState({ tags: tags });
+              }
+          }))  
+    }
+
+    filterImages = (tag) => {
+        let tagsArr = this.state.entries.map(tags => {
+            let tagsList = tags.fields.tags;       
+            if(tagsList.includes(tag)) {
+                console.log(tags);
+                this.setState({currentFilter: [tags] });
+                
+            } 
+        });
+    }
+
+
     render() {
         const entry = this.state.entries.map((entry, i) => {
             let fullImage = entry.fields.fullImage;
@@ -37,6 +83,7 @@ class ArtWork extends Component {
             <>
             <Title />
             <section className="artwork">
+                {this.state.tags && <FilterButtons tags={this.state.tags} filterImages={this.filterImages} />}
                 <aside className="art-wrapper">
                     {this.state.entries && entry }
                 </aside>

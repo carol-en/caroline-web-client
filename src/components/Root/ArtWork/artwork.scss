@@ -1,4 +1,6 @@
 @import "../root";
+@import "./style/show";
+@import "./style/tags";
 
 .artwork {
     overflow: auto;
@@ -7,7 +9,7 @@
 
 aside.art-wrapper {
     margin: 0 auto;
-    margin-top: 2em;
+    margin-top: .75em;
     padding: 1.25rem;
     background: darken($gray-color,12%);
     text-align: center;

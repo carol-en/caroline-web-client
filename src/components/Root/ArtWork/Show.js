@@ -7,19 +7,30 @@ import "./artwork.scss";
 class Image extends Component {
     render() {
         let entry = this.props.entry;
+        let { id } = entry.sys;
+        let { fullImage, title, date, category, description, tags } = entry.fields;
         return (
             <>
-                <li key= {entry.sys.id}>
-                        {entry.fields.fullImage.map((img, inx) => {
-                            return   <img src={img.fields.file.url} alt={img.fields.file.fileName} key={inx}/>
+                <aside key= {id} className="art-data">
+                    <figure className="images">
+                        {fullImage.map((img, i) => {
+                            let { url, fileName } = img.fields.file;
+                            const ratio = "?fit=thumb&w=500";
+                            const image = `${url}${ratio}`;
+                            return   <span className="art-images"><a href={url}><img src={image} alt={fileName} key={i}/></a></span>
                         })}
-                        <h2>{entry.fields.title}</h2> 
-                        <h4>{entry.fields.date}</h4>
-                        <h5>Category: {entry.fields.category}</h5>
-                        <blockquote>
-                            <Markdown source={entry.fields.description} />
-                        </blockquote>
-                </li>
+                    </figure>
+                    <div className="image-info">
+                        <ul className="info-list">
+                            <li><h1>{title}</h1></li>
+                            <li className="image-desc">
+                                <Markdown source={description} />
+                            </li>
+                            <li><strong>Category: </strong> {category}</li>
+                            <li><strong>Tags: </strong> {tags.map(tag => <span className="tag">{tag}</span>)}</li> 
+                        </ul>
+                    </div>
+                </aside>
             </>
         )
     }
@@ -44,9 +55,9 @@ class Show extends Component {
         return (
             <>
             <Title />
-                <ul>
+                <section className="show-page">
                     {entry && <Image entry={entry} /> }
-                </ul>
+                </section>
             </>
         )
     }
