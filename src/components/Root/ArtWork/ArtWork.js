@@ -32,7 +32,6 @@ class AllArt extends Component {
 
 class FilterArt extends Component {
     render() {
-        console.log(this.props.filter);
         const filteredEntries = this.props.filter.map((entry, i) => {
             let fullImage = entry.fields.fullImage;
                 return (
@@ -65,6 +64,7 @@ class FilterButtons extends Component {
                     <button key={i} className="btn-filter" onClick={() => {filterImages(tag)}}>
                         {tag}
                     </button>
+
                 )
             // }
         });
@@ -72,7 +72,7 @@ class FilterButtons extends Component {
             <aside className="tags">
                 {tags && 
                  <button className="btn-filter"  onClick={() => {filterImages("reset art")}}>
-                     All Art
+                     all art
                  </button>}
                 {tags && tags}
             </aside>
@@ -112,9 +112,9 @@ class ArtWork extends Component {
         if(data === "reset art") {
             this.setState({ currentFilter: [], filter: false })
         } else {
-            this.setState({ filter: true, currentFilter: [] })
+            this.setState({ currentFilter: [], filter: true })
         }
-        let arrayTag = []
+        let arrayTag = [];
         this.state.entries.map(entry => {
             entry.fields.tags.map(tagsList => {
                 if(tagsList.includes(data)) {
@@ -122,7 +122,7 @@ class ArtWork extends Component {
                 }
             })
         })
-        this.setState({ currentFilter: arrayTag })
+        this.setState({ currentFilter: arrayTag });
     }
 
 
