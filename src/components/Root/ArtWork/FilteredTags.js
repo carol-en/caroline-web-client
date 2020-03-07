@@ -72,7 +72,6 @@ class FilteredTags extends Component {
             <>
             <section className="artwork">
                 <FilterButtons />
-                <h1>Filter Tags Component</h1>
                 <aside className="art-wrapper">
                      <TaggedArt entries={entries}/>
                 </aside>
