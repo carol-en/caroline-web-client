@@ -14,9 +14,10 @@ class Projects extends Component {
     componentDidMount () {
 
           client.getEntries({
-              "content_type": "projects-code"
+              "content_type": "projects-code",
+              "order":"sys.createdAt"
           })
-            .then(entries => this.setState({ entries: entries.items }))
+            .then(entries => this.setState({ entries: entries.items.reverse() }))
             // .then(entries => console.log(entries.items))
 
     }

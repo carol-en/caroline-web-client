@@ -32,6 +32,7 @@ class AllArt extends Component {
 
 class FilterArt extends Component {
     render() {
+        console.log(this.props.filter);
         const filteredEntries = this.props.filter.map((entry, i) => {
             let fullImage = entry.fields.fullImage;
                 return (
@@ -60,7 +61,6 @@ class FilterButtons extends Component {
     render() {
         const filterImages = this.props.filterImages;
         const tags = this.props.tags.map((tag, i) => {
-            // if(tag === "personal" || tag === "commission" || tag === "inks" || tag === "color work") {
                 return (
                     <button key={i} className="btn-filter" onClick={() => {filterImages(tag)}}>
                         {tag}
@@ -94,9 +94,10 @@ class ArtWork extends Component {
 
     getData = () => {      
         client.getEntries({
-            "content_type": "artWork"
+            "content_type": "artWork",
+            "order":"sys.createdAt"
         })
-          .then(entries => this.setState({ entries: entries.items }))
+          .then(entries => this.setState({ entries: entries.items.reverse() }))
 
       client.getContentType('artWork')
           .then(data => data.fields.map(e => {
@@ -107,29 +108,26 @@ class ArtWork extends Component {
           }))  
     }
 
-    filterImages = (tag) => {
-        if(tag === "reset art") {
-            this.setState({ filter: false })
+    filterImages = (data) => {
+        if(data === "reset art") {
+            this.setState({ currentFilter: [], filter: false })
         } else {
-            if(this.state.filter === false) {
-                this.setState({ filter: true });
-              }
-
-            this.state.entries.map(tags => {
-                let tagsList = tags.fields.tags;       
-                if(tagsList.includes(tag)) {
-                    this.setState({ currentFilter: [tags] });
-                } 
-            });
+            this.setState({ filter: true, currentFilter: [] })
         }
+        let arrayTag = []
+        this.state.entries.map(entry => {
+            entry.fields.tags.map(tagsList => {
+                if(tagsList.includes(data)) {
+                    arrayTag.push(entry);
+                }
+            })
+        })
+        this.setState({ currentFilter: arrayTag })
     }
 
 
     render() {
-        // let filtering = this.state.filter;
-        // let { filter } = this.state;
         let { entries, tags, currentFilter, filter } = this.state;
-        console.log(filter)
         return (
             <>
             <Title />

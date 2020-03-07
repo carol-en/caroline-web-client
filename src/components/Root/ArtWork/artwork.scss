@@ -16,7 +16,7 @@ aside.art-wrapper {
     width: 75%;
     display: flex;
     flex-flow: wrap row;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
     @media(max-width: $breakpoint-m) {
         width: 85%;
@@ -37,20 +37,20 @@ aside.art-wrapper {
 
 .thumbnails {
     padding: 0;
-    margin: 2em;
+    margin: 2em 0;
 
     img {
-        max-width: 75%;
+        max-width: 65%;
         height: auto;
         @extend %transitions;
     }
 
     a img {
-        border: 2em solid $red-color;
+        border: .5em solid $red-color;
     }
 
 
     a img:hover {
-        border: 2em solid lighten($cyan-color, 20%);
+        border: .5em solid lighten($cyan-color, 20%);
     }
 }
