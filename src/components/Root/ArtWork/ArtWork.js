@@ -49,24 +49,6 @@ class ArtWork extends Component {
   
     }
 
-    // filterImages = (data) => {
-    //     if(data === "reset art") {
-    //         this.setState({ currentFilter: [], filter: false })
-    //     } else {
-    //         this.setState({ currentFilter: [], filter: true })
-    //     }
-    //     let arrayTag = [];
-    //     this.state.entries.map(entry => {
-    //         entry.fields.tags.map(tagsList => {
-    //             if(tagsList.includes(data)) {
-    //                 arrayTag.push(entry);
-    //             }
-    //         })
-    //     })
-    //     this.setState({ currentFilter: arrayTag });
-    // }
-
-
     render() {
         let { entries } = this.state;
         return (
