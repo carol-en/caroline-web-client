@@ -15,8 +15,8 @@ class RouterReact extends Component {
         <Switch>
             <Route component ={About} exact path="/about" />
             <Route component ={Projects} exact path="/projects" />
+            <Route component ={ShowArt} path="/art/entry/:artPost" />
             <Route component ={FilteredTags} path="/art/:tagsFilter" />
-            <Route component ={ShowArt} path="/art/:artPost" />
             <Route component ={ArtWork} exact path="/art" />
             <Route component ={Contact} exact path="/contact" />
             <Route component ={Home} exact path="/" />

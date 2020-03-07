@@ -11,7 +11,7 @@ class AllArt extends Component {
             let fullImage = entry.fields.fullImage;
                 return (
                     <div key={i} className="thumbnails">
-                        <Link to= {`/art/${entry.sys.id}`}>
+                        <Link to= {`/art/entry/${entry.sys.id}`}>
                             {fullImage.map((img, i) => {
                             const { url, fileName } = img.fields.file;
                             const ratio = "?fit=thumb&f=face&h=300&w=300";
