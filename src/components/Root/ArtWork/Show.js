@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Markdown from "react-markdown";
 import Title from "./Title";
 import client from "../utils/contentful";
+import { Link } from "react-router-dom";
 import "./artwork.scss";
 
 class Image extends Component {
@@ -12,6 +13,7 @@ class Image extends Component {
         return (
             <>
                 <aside key= {id} className="art-data">
+                    <Link to="/art" className="btn-return">Return</Link>
                     <figure className="images">
                         {fullImage.map((img, i) => {
                             let { url, fileName } = img.fields.file;

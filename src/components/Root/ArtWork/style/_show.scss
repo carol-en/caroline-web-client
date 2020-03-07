@@ -3,6 +3,14 @@
 .show-page {
     overflow: auto;
     background: darken($gray-color,15%);
+
+    a {
+        color: $red-color;
+    }
+    
+    a:hover {
+        color: $cyan-color;
+    }
 }
 
 aside.art-data {
@@ -13,6 +21,23 @@ aside.art-data {
 
     @media(max-width: $breakpoint-s) {
         padding: 1rem;
+    }
+
+    .btn-return {
+        text-align: right;
+        border: 1px solid $red-color;
+        display: inline-block;
+        padding: .5rem;
+        margin: 1em 0;
+        font-size: 90%;
+        opacity: .7;
+
+        @media(max-width: $breakpoint-s) {
+            padding: 1rem;
+            padding: .25rem;
+            margin: .5em 0;
+            font-size: 80%;
+        }
     }
 }
 
@@ -125,11 +150,4 @@ li.image-desc {
     font-weight: normal;
     padding: .50rem;
 
-    a {
-        color: $red-color;
-    }
-    
-    a:hover {
-        color: $cyan-color;
-    }
 }
