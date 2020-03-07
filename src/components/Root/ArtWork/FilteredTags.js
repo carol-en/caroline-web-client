@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import Title from "./Title";
-import FilterButtons from "./FilterButtons.js";
+import FilterButtons from "./FilterButtons";
 import client from "../utils/contentful";
 import { Link } from "react-router-dom";
 import "./artwork.scss";
 
-class AllArt extends Component {
+class TaggedArt extends Component {
     render() {
         const entry = this.props.entries.map((entry, i) => {
             let fullImage = entry.fields.fullImage;
@@ -31,51 +30,51 @@ class AllArt extends Component {
     }
 }
 
-class ArtWork extends Component {
+class FilteredTags extends Component {
     state = {
         entries: []
     }
-    componentDidMount () {
-        this.getData();
-
+    componentDidMount() {
+      this.getData();
     }
 
-    getData = () => {      
+    componentDidUpdate(prevProps, prevState, snapshot) {
+       let oldSlug= prevProps.match.params.tagsFilter;
+       const slug = this.props.match.params.tagsFilter; 
+       
+        if(oldSlug !== slug) {
+            this.getData();
+        }
+    }
+
+    getData = () => {
+        const slug = this.props.match.params.tagsFilter; 
+        let arrayTag = [];   
         client.getEntries({
             "content_type": "artWork",
             "order":"sys.createdAt"
+        }).then(art => {
+            art.items.map(thumbs => {
+                thumbs.fields.tags.map(tags => {
+                    if(tags.includes(slug)) {
+                       arrayTag.push(thumbs);
+                    }
+                })
+            })
+            this.setState({ entries: arrayTag });
         })
-          .then(entries => this.setState({ entries: entries.items.reverse() }))
-  
     }
 
-    // filterImages = (data) => {
-    //     if(data === "reset art") {
-    //         this.setState({ currentFilter: [], filter: false })
-    //     } else {
-    //         this.setState({ currentFilter: [], filter: true })
-    //     }
-    //     let arrayTag = [];
-    //     this.state.entries.map(entry => {
-    //         entry.fields.tags.map(tagsList => {
-    //             if(tagsList.includes(data)) {
-    //                 arrayTag.push(entry);
-    //             }
-    //         })
-    //     })
-    //     this.setState({ currentFilter: arrayTag });
-    // }
-
-
     render() {
-        let { entries } = this.state;
+        let {entries} = this.state;
+        
         return (
             <>
-            <Title />
             <section className="artwork">
-                 <FilterButtons />
+                <FilterButtons />
+                <h1>Filter Tags Component</h1>
                 <aside className="art-wrapper">
-                    {entries && <AllArt entries={entries}/>}
+                     <TaggedArt entries={entries}/>
                 </aside>
             </section>
             </>
@@ -83,5 +82,4 @@ class ArtWork extends Component {
     }
 }
 
-
-export default ArtWork;
+export default FilteredTags;

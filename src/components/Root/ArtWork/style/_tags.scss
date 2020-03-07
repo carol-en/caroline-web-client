@@ -9,7 +9,7 @@ aside.tags {
     flex-flow: wrap row;
     justify-content: center;
 
-    button.btn-filter {
+    a.btn-filter {
         background: darken($gray-color,15%);
         border: 0;
         font-family: $Overpass-Mono;
@@ -29,7 +29,7 @@ aside.tags {
     
     }
 
-    button.btn-filter:hover {
+    a.btn-filter:hover {
         background: $cyan-color;
         color: $white-color;
     }
