@@ -17,6 +17,8 @@ aside.art-wrapper {
     display: flex;
     flex-flow: wrap row;
     justify-content: space-evenly;
+    box-shadow:
+    darken($gray-color, 12%) 0px 0px 5px; 
 
     @media(max-width: $breakpoint-m) {
         width: 85%;

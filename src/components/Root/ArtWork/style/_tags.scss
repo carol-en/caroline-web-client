@@ -8,6 +8,8 @@ aside.tags {
     display: flex;
     flex-flow: wrap row;
     justify-content: center;
+    box-shadow:
+    darken($gray-color, 12%) 0px 0px 5px; 
 
     a.btn-filter {
         background: darken($gray-color,15%);
