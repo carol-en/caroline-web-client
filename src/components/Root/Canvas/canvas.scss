@@ -1,7 +1,7 @@
 @import "../root";
 
   canvas.hero {
-    background: url("./images/color-b.png")center center no-repeat;
+    background: $white-color url("./images/color-b.png")center center no-repeat;
     background-size: cover;
     cursor: crosshair;
     cursor: url("./images/cursor-pink.png"), auto;

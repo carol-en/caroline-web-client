@@ -18,11 +18,7 @@ class Canvas extends Component {
     componentDidMount () {
         this.init();
     }
-
-    componentWillUnmount () {
-        this.init();
-    }
-
+    
     cover(image, cxt) {
         const imgRatio = image.height / image.width;
         const winRatio = window.innerHeight / window.innerWidth;
