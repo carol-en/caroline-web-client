@@ -7,13 +7,14 @@ import "./nav.scss";
 
 class MenuLinks extends Component {
     render() {
+        let { isOpen } = this.props;
         return (
         <nav>
-            <Link to="/" className="menu-link">Home</Link>
-            <Link to="/about" className="menu-link">About</Link>
-            <Link to="/projects" className="menu-link">Code Projects</Link>
-            <Link to="/art" className="menu-link">Art Work</Link>
-            <Link to="/contact" className="menu-link">Contact</Link>
+            <Link to="/" className="menu-link" onClick={isOpen}>Home</Link>
+            <Link to="/about" className="menu-link" onClick={isOpen}>About</Link>
+            <Link to="/projects" className="menu-link" onClick={isOpen}>Code Projects</Link>
+            <Link to="/art" className="menu-link" onClick={isOpen}>Art Work</Link>
+            <Link to="/contact" className="menu-link" onClick={isOpen}>Contact</Link>
         </nav>
         )
     }
@@ -32,6 +33,13 @@ class Nav extends Component {
     componentWillUnmount() {
         window.removeEventListener('resize', throttle(this.watchMenu, 100));
       }
+
+      componentDidUpdate(prevProps, prevState, snapshot) {
+        const IsTablet = window.innerWidth < 900;
+        if(IsTablet && prevState === true) {
+            this.toggleOpen();
+        }
+     }
     
 
     watchMenu = () => {
@@ -52,13 +60,14 @@ class Nav extends Component {
     }
 
     render() {
+        let { isOpen } = this.state;
         return (
             <aside className="navigate">
                 <button className="burger" onClick={() => this.toggleOpen()}>
                     <FontAwesomeIcon icon={faBars} />
                     <h1 className="carol">Caroline Nolasco</h1>
                 </button>
-                {this.state.isOpen && <MenuLinks toggleOpen={this.toggleOpen}/>}
+                {isOpen && <MenuLinks toggleOpen={this.toggleOpen}/>}
             </aside>
         )
     }
