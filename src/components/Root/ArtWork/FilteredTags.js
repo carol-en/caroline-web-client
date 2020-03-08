@@ -32,7 +32,8 @@ class TaggedArt extends Component {
 
 class FilteredTags extends Component {
     state = {
-        entries: []
+        entries: [],
+        tag: ""
     }
     componentDidMount() {
       this.getData();
@@ -61,18 +62,19 @@ class FilteredTags extends Component {
                     }
                 })
             })
-            this.setState({ entries: arrayTag });
+            this.setState({ entries: arrayTag, tag: slug });
         })
     }
 
     render() {
-        let {entries} = this.state;
+        let {entries, tag} = this.state;
         
         return (
             <>
             <section className="artwork">
                 <FilterButtons />
                 <aside className="art-wrapper">
+                <h1>{tag}</h1>
                      <TaggedArt entries={entries}/>
                 </aside>
             </section>

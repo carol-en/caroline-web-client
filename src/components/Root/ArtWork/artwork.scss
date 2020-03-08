@@ -20,6 +20,20 @@ aside.art-wrapper {
     box-shadow:
     darken($gray-color, 12%) 0px 0px 5px; 
 
+    h1 {
+        align-self:stretch;
+        text-align: left;
+        padding-left: 1rem;
+        width: 100%;
+        color: $cyan-color;
+        font-size: 300%;
+
+        @media(max-width: $breakpoint-s) {
+            font-size: 200%;
+            margin: .25em;
+        }
+    }
+
     @media(max-width: $breakpoint-m) {
         width: 85%;
         padding: .75rem;

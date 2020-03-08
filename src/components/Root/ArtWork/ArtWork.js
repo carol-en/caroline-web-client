@@ -57,6 +57,7 @@ class ArtWork extends Component {
             <section className="artwork">
                  <FilterButtons />
                 <aside className="art-wrapper">
+                    <h1>all art</h1>
                     {entries && <AllArt entries={entries}/>}
                 </aside>
             </section>
