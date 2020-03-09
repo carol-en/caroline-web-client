@@ -49,14 +49,14 @@ class Nav extends Component {
         if(isDesktop) {
             this.setState( { isOpen: true });
         } else if(IsTablet) {
-            this.setState({ isOpen: false })
+            this.setState({ isOpen: false });
         }
 
     }
 
 
     toggleOpen() {
-        this.setState({ isOpen: !this.state.isOpen })
+        this.setState({ isOpen: !this.state.isOpen });
     }
 
     render() {
@@ -67,7 +67,7 @@ class Nav extends Component {
                     <FontAwesomeIcon icon={faBars} />
                     <h1 className="carol">Caroline Nolasco</h1>
                 </button>
-                {isOpen && <MenuLinks />}
+                {isOpen && <MenuLinks/>}
             </aside>
         )
     }

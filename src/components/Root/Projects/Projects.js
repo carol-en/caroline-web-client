@@ -17,21 +17,12 @@ class Projects extends Component {
               "content_type": "projects-code",
               "order":"sys.createdAt"
           })
-            .then(entries => this.setState({ entries: entries.items.reverse() }))
-            // .then(entries => console.log(entries.items))
+            .then(entries => this.setState({ entries: entries.items.reverse() }));
 
     }
     render() {
         let entries = this.state.entries;
         const entry = entries.map(entry => {
-           if(!entry) {
-                return (
-                    <>
-                        <h2>Loading...</h2>
-                    </>
-                )
-            } else { 
-                
                 return (
                     <aside key={entry.sys.id} className="prj-entry">
                         <div className="prj-img">
@@ -45,21 +36,19 @@ class Projects extends Component {
                                     {entry.fields.title}
                                 </h2> 
                                 <span className="prj-links">
-                                <a href={entry.fields.appLink}><FontAwesomeIcon  icon={faMobile} />  Open App</a>
-                                <a href={entry.fields.githubLink}><FontAwesomeIcon  icon={faGithub} />  Open GitHub</a>
+                                <a href={entry.fields.appLink} target="_blank" rel="noopener"><FontAwesomeIcon  icon={faMobile}/>  Open App</a>
+                                <a href={entry.fields.githubLink} target="_blank" rel="noopener"><FontAwesomeIcon  icon={faGithub}/>  Open GitHub</a>
                                 </span>
                             <Markdown source={entry.fields.description} />
                         </div>                        
                     </aside>
             )
-            }
-        
         });
         return (
             <>
             <Title />
                 <section className="projects">
-                    {entry}   
+                    {entries && entry}   
                 </section>
             </>
         )
