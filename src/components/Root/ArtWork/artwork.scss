@@ -31,6 +31,33 @@ aside.art-wrapper {
         @media(max-width: $breakpoint-s) {
             font-size: 200%;
             margin: .25em;
+            text-align: center;
+        }
+    }
+
+    span.note {
+        align-self: stretch;
+        width: 100%;
+        text-align: left;
+        padding-left: 1rem;
+        font-size: 100%;
+        color: desaturate(darken($cream-color, 20%), 50);
+
+        strong {
+            color: $cyan-color;
+        }
+
+        a {
+            color: $red-color;
+        }
+
+        a:hover {
+            color: $cyan-color;
+        }
+
+        @media(max-width: $breakpoint-s) {
+            font-size: 90%;
+            text-align: center;
         }
     }
 

@@ -75,6 +75,7 @@ class FilteredTags extends Component {
                 <FilterButtons />
                 <aside className="art-wrapper">
                 <h1>{tag}</h1>
+                <span className="note"><strong>Note: </strong> You can view more, downloadable PDF color sample portfolios <a href="https://www.dropbox.com/sh/5ft36ci5ccxmlnt/AAAOeu4_4l-FqxnrHd8KJJbca?dl=0" title="here" target="_blank" rel="noopener">here.</a></span>
                      <TaggedArt entries={entries}/>
                 </aside>
             </section>

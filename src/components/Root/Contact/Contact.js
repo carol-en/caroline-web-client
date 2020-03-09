@@ -34,22 +34,22 @@ class Contact extends Component {
                         <h3 className="sm">Find me @</h3>
                             <div className="s-media">
                                 <span>
-                                    <a href="https://github.com/carol-en" title="Github"><FontAwesomeIcon icon={faGithub} /></a>
+                                    <a href="https://github.com/carol-en" title="Github"  target="_blank" rel="noopener"><FontAwesomeIcon icon={faGithub} /></a>
                                 </span>
                                 <span>
                                     <a href="https://www.linkedin.com/in/carolinenolasco/" title="LinkedIn"><FontAwesomeIcon icon={faLinkedin} /></a>
                                 </span>
                                 <span>
-                                    <a href="https://twitter.com/carol_colours" title="Twitter"><FontAwesomeIcon icon={faTwitter} /></a>
+                                    <a href="https://twitter.com/carol_colours" title="Twitter"  target="_blank" rel="noopener"><FontAwesomeIcon icon={faTwitter} /></a>
                                 </span>
                                 <span>
-                                    <a href="https://www.instagram.com/carolnart/" title="Instagram"><FontAwesomeIcon icon={faInstagram} /></a>
+                                    <a href="https://www.instagram.com/carolnart/" title="Instagram"  target="_blank" rel="noopener"><FontAwesomeIcon icon={faInstagram} /></a>
                                 </span>
                                 <span>
-                                    <a href="https://www.facebook.com/cnolasco" title="Facebook"><FontAwesomeIcon icon={faFacebook} /></a>
+                                    <a href="https://www.facebook.com/cnolasco" title="Facebook"  target="_blank" rel="noopener"><FontAwesomeIcon icon={faFacebook} /></a>
                                 </span>
                                 <span>
-                                    <a href="https://www.deviantart.com/carol-n92" title="Deviant Art"><FontAwesomeIcon icon={faDeviantart} /></a>
+                                    <a href="https://www.deviantart.com/carol-n92" title="Deviant Art"  target="_blank" rel="noopener"><FontAwesomeIcon icon={faDeviantart} /></a>
                                 </span>
                             </div>
                     </aside>}
