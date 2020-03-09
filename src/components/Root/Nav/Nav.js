@@ -30,7 +30,7 @@ class Nav extends Component {
         window.addEventListener("resize", throttle(this.watchMenu, 100))
     }
     componentWillUnmount() {
-        // window.removeEventListener('resize', throttle(this.watchMenu, 100));
+        window.removeEventListener('resize', throttle(this.watchMenu, 100));
       }
 
       componentDidUpdate(prevProps, prevState, snapshot) {
@@ -38,6 +38,7 @@ class Nav extends Component {
         if(IsTablet && prevState === true) {
             this.toggleOpen();
         }
+
      }
     
 

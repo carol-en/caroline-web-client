@@ -62,7 +62,7 @@ class FilteredTags extends Component {
                     }
                 })
             })
-            this.setState({ entries: arrayTag, tag: slug });
+            this.setState({ entries: arrayTag, tag: slug.reverse() });
         })
     }
 
