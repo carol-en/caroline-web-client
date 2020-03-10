@@ -58,7 +58,7 @@ class ArtWork extends Component {
                  <FilterButtons />
                 <aside className="art-wrapper">
                     <h1>all art</h1>
-                    <span className="note"><strong>Note: </strong>You can view updated pieces and works in progress on my <a href="https://www.instagram.com/carolnart/" title="instagram" target="_blank" rel="noopener">instagram</a> and other <a href="/contact" title="social medias">social medias!</a></span>
+                    <span className="note"><strong>Note: </strong>You can view updated pieces and works in progress on my <a href="https://www.instagram.com/carolnart/" title="instagram" target="_blank" rel="noopener noreferrer">instagram</a> and other <a href="/contact" title="social medias">social medias!</a></span>
                     {entries && <AllArt entries={entries}/>}
                 </aside>
             </section>

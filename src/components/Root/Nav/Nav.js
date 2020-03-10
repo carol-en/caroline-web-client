@@ -7,8 +7,9 @@ import "./nav.scss";
 
 class MenuLinks extends Component {
     render() {
+        let toggleOpen = this.props.toggleOpen;
         return (
-        <nav>
+        <nav onClick={() => toggleOpen()}>
             <Link to="/" className="menu-link">Home</Link>
             <Link to="/about" className="menu-link">About</Link>
             <Link to="/projects" className="menu-link">Code Projects</Link>
@@ -21,6 +22,7 @@ class MenuLinks extends Component {
 
 
 class Nav extends Component {
+
     state = {
         isOpen: null
     }
@@ -31,15 +33,8 @@ class Nav extends Component {
     }
     componentWillUnmount() {
         window.removeEventListener('resize', throttle(this.watchMenu, 100));
-      }
-
-      componentDidUpdate(prevProps, prevState, snapshot) {
-        const IsTablet = window.innerWidth < 900;
-        if(IsTablet && prevState === true) {
-            this.toggleOpen();
         }
-
-     }
+    
     
 
     watchMenu = () => {
@@ -55,9 +50,14 @@ class Nav extends Component {
     }
 
 
-    toggleOpen() {
-        this.setState({ isOpen: !this.state.isOpen });
+    toggleOpen = () => {
+        const IsTablet = window.innerWidth < 900;
+        
+        if(IsTablet) {
+            this.setState({ isOpen: !this.state.isOpen });
+        }
     }
+
 
     render() {
         let { isOpen } = this.state;
@@ -67,7 +67,7 @@ class Nav extends Component {
                     <FontAwesomeIcon icon={faBars} />
                     <h1 className="carol">Caroline Nolasco</h1>
                 </button>
-                {isOpen && <MenuLinks/>}
+                {isOpen && <MenuLinks toggleOpen={this.toggleOpen} />}
             </aside>
         )
     }

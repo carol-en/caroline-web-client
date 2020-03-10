@@ -60,6 +60,12 @@
 .prj-img {
     filter: grayscale(50%);
     @extend %transitions;
+    text-align:center;
+    padding: 0;
+
+    @media(max-width: $breakpoint-xs) {
+        padding: 1rem;
+    }
 }
 
 aside.prj-entry:hover .prj-img {
@@ -69,6 +75,14 @@ aside.prj-entry:hover .prj-img {
 aside.prj-entry:hover {
     transform: scale(1.2);
     background: darken($gray-color, 11%);
+
+    @media(max-width: $breakpoint-s) {
+        transform: scale(1.1);
+    }
+
+    @media(max-width: $breakpoint-xs) {
+        transform: scale(1.05);
+    }
 }
 
 span.prj-links  {

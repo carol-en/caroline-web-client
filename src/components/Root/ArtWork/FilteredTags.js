@@ -78,11 +78,11 @@ class FilteredTags extends Component {
                 <h1>{tag}</h1>
                 { tag === "color work" || tag === "digital" || tag === "illustration" ? 
                      <span className="note">
-                         <strong>Note: </strong> You can view more, downloadable PDF color work portfolios <a href="https://www.dropbox.com/sh/5ft36ci5ccxmlnt/AAAOeu4_4l-FqxnrHd8KJJbca?dl=0" title="here" target="_blank" rel="noopener">here.</a>
+                         <strong>Note: </strong> You can view more, downloadable PDF color work portfolios <a href="https://www.dropbox.com/sh/5ft36ci5ccxmlnt/AAAOeu4_4l-FqxnrHd8KJJbca?dl=0" title="here" target="_blank" rel="noopener noreferrer">here.</a>
                      </span> 
                         : 
                      <span className="note">
-                         <strong>Note: </strong>You can view updated pieces and works in progress on my <a href="https://www.instagram.com/carolnart/" title="instagram" target="_blank" rel="noopener">instagram</a> and other <a href="/contact" title="social medias">social medias!</a>
+                         <strong>Note: </strong>You can view updated pieces and works in progress on my <a href="https://www.instagram.com/carolnart/" title="instagram" target="_blank" rel="noopener noreferrer">instagram</a> and other <a href="/contact" title="social medias">social medias!</a>
                      </span> }
                      
                      <TaggedArt entries={entries}/>
