@@ -25,6 +25,7 @@
         font-size: 130%;
         width: 75%;
         margin: 0 auto;
+        margin-bottom: 2em;
         padding: 1.25rem;
         display: flex;
         flex-flow: nowrap row;
@@ -43,7 +44,8 @@
             width: 90%;
             padding: .5rem;
             flex-flow: nowrap column;
-            margin: 1.5em auto;
+            margin: 0 auto;
+            margin-bottom: 1.5em;
             font-size: 95%;
         }
 
