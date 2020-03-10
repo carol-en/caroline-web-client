@@ -39,19 +39,18 @@ a:hover.menu-link {
 }
 
 button.burger {
-    display: initial;
-    width: 100%;
-    color: $cream-color;
-    background: $red-color;
-    border: 0;
-    font-size: 2.5em;
-    padding: .50em;
-    text-align: left;
     display:none;
-    cursor: pointer;
 
     @media(max-width: $breakpoint-s) {
         display: initial;
+        cursor: pointer;
+        width: 100%;
+        color: $cream-color;
+        background: $red-color;
+        border: 0;
+        font-size: 2.5em;
+        padding: .50em;
+        text-align: left;
     
     }
 }
