@@ -31,9 +31,10 @@ class Nav extends Component {
         this.watchMenu();
         window.addEventListener("resize", throttle(this.watchMenu, 100))
     }
+
     componentWillUnmount() {
         window.removeEventListener('resize', throttle(this.watchMenu, 100));
-        }
+    }
     
     
 

@@ -47,11 +47,11 @@ button.burger {
     font-size: 2.5em;
     padding: .50em;
     text-align: left;
-    display:initial;
+    display:none;
     cursor: pointer;
 
-    @media(min-width: $breakpoint-s) {
-        display: none;
+    @media(max-width: $breakpoint-s) {
+        display: initial;
     
     }
 }
