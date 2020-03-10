@@ -17,7 +17,7 @@ class Image extends Component {
                     <figure className="images">
                         {fullImage.map((img, i) => {
                             let { url, fileName } = img.fields.file;
-                            const ratio = "?fit=thumb&w=500";
+                            const ratio = "?fit=thumb&w=600";
                             const image = `${url}${ratio}`;
                             return   <span className="art-images"><a href={url}><img src={image} alt={fileName} key={i}/></a></span>
                         })}

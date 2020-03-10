@@ -63,7 +63,7 @@ figure.images {
 
 
     img {
-        max-width: 75%;
+        max-width: 100%;
         height: auto;
         margin: 0;
         @extend %transitions;
@@ -76,8 +76,16 @@ figure.images {
     a img {
         border: 1em solid $red-color;
 
-        @media(max-width: $breakpoint-s) {
+        @media(max-width: $breakpoint-l) {
+            border: .85em solid $red-color;
+        }
+
+        @media(max-width: $breakpoint-m) {
             border: .75em solid $red-color;
+        }
+
+        @media(max-width: $breakpoint-s) {
+            border: .45em solid $red-color;
         }
 
         @media(max-width: $breakpoint-xs) {
@@ -97,6 +105,19 @@ figure.images {
 span.art-images {
     display: block;
     text-align: center;
+    padding: 1rem;
+
+    @media(max-width: $breakpoint-l) {
+        padding: .85rem;
+    }
+        
+    @media(max-width: $breakpoint-m) {
+        padding: .5rem;
+    }
+
+    @media(max-width: $breakpoint-s) {
+        padding: .25rem;
+    }
 }
 
 .image-info {
