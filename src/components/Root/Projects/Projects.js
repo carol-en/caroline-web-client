@@ -48,6 +48,7 @@ class Projects extends Component {
             <>
             <Title />
                 <section className="projects">
+                <h1>Projects: Code</h1>
                     {entries && entry}   
                 </section>
             </>
