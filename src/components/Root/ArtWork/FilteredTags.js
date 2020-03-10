@@ -62,7 +62,8 @@ class FilteredTags extends Component {
                     }
                 })
             })
-            this.setState({ entries: arrayTag.reverse(), tag: slug });
+        let uniqueTags =[ ...new Set(arrayTag)].reverse();
+        this.setState({ entries: uniqueTags, tag: slug });
         })
     }
 
