@@ -1,6 +1,7 @@
 # Splashes of Color
 A brand spanking new update of my portfolio site, updated from head to toe from the first time since 2016. Originally created using static pages in PHP with a gallery using [Coppermine Gallery](https://coppermine-gallery.net/). This new version, the biggest thing I wanted to do was marry my two skill sets: coding and illustration and I knew from the start I wanted something interactive, such as having the visitor 'paint' in a specially created art piece. Not only that but I wanted to create my own personal gallery/portfolio app rather than rely on someone elses's; all while using new and updated tech. I think I did a fairly good job.
 
+### [Open site](http://www.carolinenolasco.com/)
 
 ## The Site
 
