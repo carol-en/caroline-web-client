@@ -26,6 +26,21 @@ section.about {
     }
 }
 
+span {
+    display: block;
+    font-size: 175%;
+    padding-left: 1rem;
+    @extend %transitions;
+
+    a {
+        color: $red-color;
+    }
+
+    a:hover {
+        color: $cyan-color;
+    }
+}
+
 aside.about-data {
     background:  darken($gray-color, 13%);
     width: 80%;
