@@ -9,7 +9,8 @@ import "./projects.scss";
 
 class Projects extends Component {
     state = {
-        entries: []
+        entries: [],
+        title: ""
     }
     componentDidMount () {
 
@@ -17,7 +18,10 @@ class Projects extends Component {
               "content_type": "projects-code",
               "order":"sys.createdAt"
           })
-            .then(entries => this.setState({ entries: entries.items.reverse() }));
+            .then(entries => {
+                let title = entries.items[0].sys.contentType.sys.id.split("", 8).join("");
+                this.setState({ entries: entries.items.reverse(), title: title })
+            } );
 
     }
     render() {
@@ -48,7 +52,7 @@ class Projects extends Component {
             <>
             <Title />
                 <section className="projects">
-                <h1>Projects: Code</h1>
+                    <h1>{this.state.title}</h1>
                     {entries && entry}   
                 </section>
             </>

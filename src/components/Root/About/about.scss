@@ -19,6 +19,7 @@ section.about {
 .pg {
     color: $cyan-color;
     font-size: 300%;
+    text-transform: lowercase;
 
     @media(max-width: $breakpoint-s) {
         font-size: 250%;

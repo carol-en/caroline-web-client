@@ -33,7 +33,8 @@ class AllArt extends Component {
 
 class ArtWork extends Component {
     state = {
-        entries: []
+        entries: [],
+        title: ""
     }
     componentDidMount () {
         this.getData();
@@ -45,7 +46,10 @@ class ArtWork extends Component {
             "content_type": "artWork",
             "order":"sys.createdAt"
         })
-          .then(entries => this.setState({ entries: entries.items.reverse() }))
+          .then(entries => { 
+            let title = entries.items[0].sys.contentType.sys.id.split("").join("");
+              this.setState({ entries: entries.items.reverse(), title: title }) 
+            })
   
     }
 
@@ -57,7 +61,7 @@ class ArtWork extends Component {
             <section className="artwork">
                  <FilterButtons />
                 <aside className="art-wrapper">
-                    <h1>Projects: Art</h1>
+                    <h1>{this.state.title}</h1>
                     <span className="note"><strong>Note: </strong>You can view updated pieces and works in progress on my <a href="https://www.instagram.com/carolnart/" title="instagram" target="_blank" rel="noopener noreferrer">instagram</a> and other <a href="/contact" title="social medias">social medias!</a></span>
                     {entries && <AllArt entries={entries}/>}
                 </aside>
