@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Markdown from "react-markdown";
 import Title from "./Title";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCertificate } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faFacebook, faInstagram, faDeviantart, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import client from "../utils/contentful";
 import "./contact.scss";
@@ -39,6 +40,11 @@ class Contact extends Component {
                                 <span>
                                     <a href="https://www.linkedin.com/in/carolinenolasco/" title="LinkedIn" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>
                                 </span>
+
+                                <span>
+                                    <a href="https://profiles.generalassemb.ly/caroline-nolasco" title="General Assembly"  target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faCertificate} /></a>
+                                </span>
+
                                 <span>
                                     <a href="https://twitter.com/carol_colours" title="Twitter"  target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a>
                                 </span>

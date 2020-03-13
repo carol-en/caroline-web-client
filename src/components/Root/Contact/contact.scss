@@ -92,6 +92,10 @@ aside.contact-data p {
         a:hover {
             color: $cyan-color;
         }
+
+        @media(max-width: $breakpoint-m) {
+            font-size: 95%;
+        }
     }
 
     span:hover {
