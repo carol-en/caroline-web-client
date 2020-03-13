@@ -65,8 +65,9 @@ class Nav extends Component {
         return (
             <aside className="navigate">
                 <button className="burger" onClick={() => this.toggleOpen()}>
-                    <FontAwesomeIcon icon={faBars} />
+                    <FontAwesomeIcon icon={faBars} className="bars"/>
                     <h1 className="carol">Caroline Nolasco</h1>
+                    <h3 className="lead"> | Front End Developer & Freelance Illustrator</h3>
                 </button>
                 {isOpen && <MenuLinks toggleOpen={this.toggleOpen} />}
             </aside>

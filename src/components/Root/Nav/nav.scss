@@ -26,10 +26,22 @@ nav {
 a.menu-link {
     color: $cream-color;
     background: $red-color;
-    padding: 2em;
+    padding: 2rem;
+
+    @media(max-width: $breakpoint-l) {
+        padding: 1.75rem;
+    }
+
+    @media(max-width: $breakpoint-m) {
+        padding: 1.25rem;
+    }
 
     @media(max-width: $breakpoint-s) {
-        padding: 1em;
+        padding: 1rem;
+    }
+
+    @media(max-width: $breakpoint-s) {
+        padding: .85rem;
     }
 }
 
@@ -48,24 +60,39 @@ button.burger {
         color: $cream-color;
         background: $red-color;
         border: 0;
-        font-size: 2.5em;
-        padding: .50em;
-        text-align: left;
-    
+        font-size: 2.25em;
+        padding: .85rem;
+        display: flex;
+        flex-flow: nowrap row;
+        justify-content: flex-start;
     }
 }
 
-h1.carol {
+button.burger:focus {
+    outline: none;
+}
+
+h1.carol, h3.lead {
     display: none;
     margin-top: 0;
 
     @media(max-width: $breakpoint-s) {
-        display: inline-block;
+        display: initial;
         font-size: 75%;
         margin-left: 2em;
     }
 
     @media(max-width: $breakpoint-xs) {
         font-size: 60%;
+    }
+}
+h3.lead {
+    @media(max-width: $breakpoint-s) {
+        font-size: 25%;
+        padding-top: .75rem;
+    }
+
+    @media(max-width: $breakpoint-xs)  {
+        display: none;
     }
 }
