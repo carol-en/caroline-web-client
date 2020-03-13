@@ -3,7 +3,14 @@ import Markdown from "react-markdown";
 import Title from "./Title";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCertificate } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin, faFacebook, faInstagram, faDeviantart, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { 
+    faGithub, 
+    faLinkedin, 
+    faFacebook, 
+    faInstagram, 
+    faTwitter, 
+    faArtstation 
+} from '@fortawesome/free-brands-svg-icons';
 import client from "../utils/contentful";
 import "./contact.scss";
 
@@ -45,17 +52,21 @@ class Contact extends Component {
                                     <a href="https://profiles.generalassemb.ly/caroline-nolasco" title="General Assembly"  target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faCertificate} /></a>
                                 </span>
 
+
                                 <span>
-                                    <a href="https://twitter.com/carol_colours" title="Twitter"  target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a>
+                                    <a href="hhttps://www.artstation.com/carolen" title="Art Station"  target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faArtstation} /></a>
                                 </span>
+
                                 <span>
                                     <a href="https://www.instagram.com/carolnart/" title="Instagram"  target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faInstagram} /></a>
                                 </span>
+
+                                <span>
+                                    <a href="https://twitter.com/carol_colours" title="Twitter"  target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} /></a>
+                                </span>
+                                
                                 <span>
                                     <a href="https://www.facebook.com/cnolasco" title="Facebook"  target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebook} /></a>
-                                </span>
-                                <span>
-                                    <a href="https://www.deviantart.com/carol-n92" title="Deviant Art"  target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faDeviantart} /></a>
                                 </span>
                             </div>
                     </aside>}
