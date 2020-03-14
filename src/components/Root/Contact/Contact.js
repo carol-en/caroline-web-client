@@ -54,7 +54,7 @@ class Contact extends Component {
 
 
                                 <span>
-                                    <a href="hhttps://www.artstation.com/carolen" title="Art Station"  target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faArtstation} /></a>
+                                    <a href="https://www.artstation.com/carolen" title="Art Station"  target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faArtstation} /></a>
                                 </span>
 
                                 <span>
