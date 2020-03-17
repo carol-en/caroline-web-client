@@ -19,7 +19,7 @@ class Image extends Component {
                             let { url, fileName } = img.fields.file;
                             const ratio = "?fit=thumb&w=600";
                             const image = `${url}${ratio}`;
-                            return   <span className="art-images"><a href={url}><img src={image} alt={fileName} key={i}/></a></span>
+                            return   <span className="art-images"><a href={url} target="_blank" rel="noopener noreferrer"><img src={image} alt={fileName} key={i}/></a></span>
                         })}
                     </figure>
                     <div className="image-info">
