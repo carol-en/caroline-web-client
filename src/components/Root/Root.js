@@ -7,6 +7,9 @@ import Nav from "./Nav";
 
 class Root extends Component {
     componentDidMount = () => {
+        fetch("https://easy-bank-landing.herokuapp.com/", {mode: 'no-cors'})
+        .then(res => console.log("woke up art easy bank landing page"));
+
         fetch("https://art-marks-server.herokuapp.com/my_bookmarks", {mode: 'no-cors'})
          .then(res => console.log("woke up art marks server"));
 
